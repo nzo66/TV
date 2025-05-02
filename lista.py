@@ -20,6 +20,7 @@ def merger_playlist():
     url1 = "channels_italy.m3u8"  # File locale
     url2 = "eventi.m3u8"   
     url3 = "https://raw.githubusercontent.com/Brenders/Pluto-TV-Italia-M3U/main/PlutoItaly.m3u"  # Remoto
+    url4 = "world.m3u8"           # File locale
     
     # Funzione per scaricare o leggere una playlist
     def download_playlist(source, append_params=False, exclude_group_title=None):
@@ -46,9 +47,10 @@ def merger_playlist():
     playlist1 = download_playlist(url1)
     playlist2 = download_playlist(url2, append_params=True)
     playlist3 = download_playlist(url3)
+    playlist4 = download_playlist(url4, exclude_group_title="Italy")
     
     # Unisci le playlist
-    lista = playlist1 + "\n" + playlist2 + "\n" + playlist3
+    lista = playlist1 + "\n" + playlist2 + "\n" + playlist3 + "\n" + playlist4
     
     # Aggiungi intestazione EPG
     lista = '#EXTM3U x-tvg-url="https://raw.githubusercontent.com/nzo66/TV/refs/heads/main/epg.xml"\n' + lista
@@ -755,12 +757,81 @@ def vavoo_italy_channels():
     
     if __name__ == "__main__":
         main()
+# Funzione per il settimo script (world_channels_generator.py)
+def world_channels_generator():
+    # Codice del settimo script qui
+    # Aggiungi il codice del tuo script "world_channels_generator.py" in questa funzione.
+    print("Eseguendo il world_channels_generator.py...")
+    # Il codice che avevi nello script "world_channels_generator.py" va qui, senza modifiche.
+    import requests
+    import re
+    import os
+    from collections import defaultdict
     
+    OUTPUT_FILE = "world.m3u8"
+    BASE_URLS = [
+        "https://vavoo.to"
+    ]
+    
+    # Scarica la lista dei canali
+    def fetch_channels(base_url):
+        try:
+            response = requests.get(f"{base_url}/channels", timeout=10)
+            response.raise_for_status()
+            return response.json()
+        except requests.RequestException as e:
+            print(f"Errore durante il download da {base_url}: {e}")
+            return []
+    
+    # Pulisce il nome del canale
+    def clean_channel_name(name):
+        return re.sub(r"\s*(\|E|\|H|\(6\)|\(7\)|\.c|\.s)", "", name).strip()
+    
+    # Salva il file M3U8 con i canali ordinati alfabeticamente per categoria
+    def save_m3u8(channels):
+        if os.path.exists(OUTPUT_FILE):
+            os.remove(OUTPUT_FILE)
+    
+        # Raggruppa i canali per nazione (group-title)
+        grouped_channels = defaultdict(list)
+        for name, url, country in channels:
+            grouped_channels[country].append((name, url))
+    
+        # Ordina le categorie alfabeticamente e i canali dentro ogni categoria
+        sorted_categories = sorted(grouped_channels.keys())
+    
+        with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
+            f.write('#EXTM3U\n\n')
+    
+            for country in sorted_categories:
+                # Ordina i canali in ordine alfabetico dentro la categoria
+                grouped_channels[country].sort(key=lambda x: x[0].lower())
+    
+                for name, url in grouped_channels[country]:
+                    f.write(f'#EXTINF:-1 tvg-name="{name}" group-title="{country}", {name}\n')
+                    f.write(f"https://nzo66-piccolotest.hf.space/proxy/m3u?url={url}\n\n")
+    
+    # Funzione principale
+    def main():
+        all_channels = []
+        for url in BASE_URLS:
+            channels = fetch_channels(url)
+            for ch in channels:
+                clean_name = clean_channel_name(ch["name"])
+                country = ch.get("country", "Unknown")  # Estrai la nazione del canale, default è "Unknown"
+                all_channels.append((clean_name, f"{url}/play/{ch['id']}/index.m3u8", country))
+    
+        save_m3u8(all_channels)
+        print(f"File {OUTPUT_FILE} creato con successo!")
+    
+    if __name__ == "__main__":
+        main()
+
 def remover():
     import os
     
     # Lista dei file da eliminare
-    files_to_delete = ["channels_italy.m3u8", "eventi.m3u8", "eventi.xml"]
+    files_to_delete = ["world.m3u8", "channels_italy.m3u8", "eventi.m3u8", "eventi.xml"]
     
     for filename in files_to_delete:
         if os.path.exists(filename):
@@ -801,6 +872,12 @@ def run_all_scripts():
         vavoo_italy_channels()
     except Exception as e:
         print(f"Errore durante l'esecuzione di vavoo_italy_channels: {e}")
+        return
+
+    try:
+        world_channels_generator()
+    except Exception as e:
+        print(f"Errore durante l'esecuzione di world_channels_generator: {e}")
         return
 
     try:

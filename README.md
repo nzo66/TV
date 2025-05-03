@@ -69,7 +69,7 @@ https://tuoproxy.hf.space/proxy/hls/manifest.m3u8?api_password=miaPassword&d=
 
 #### 3️⃣ Modifica degli Header
 
-Nel file `lista.py`, alla **riga 297**, cerca:
+Nella stessa riga, cerca:
 
 ```text
 &header_user-agent=...&header_referer=...&header_origin=...

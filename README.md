@@ -50,7 +50,7 @@ https://nzo66-piccolotest.hf.space
 
 con **il tuo** URL HuggingFace, Render o self-hosted (es: `https://tuonome.hf.space`)
 
-#### 2️⃣ Se usi `mediaflow-proxy`
+#### 2️⃣ Se usi [mediaflow-proxy](https://github.com/mhdzumair/mediaflow-proxy)
 
 Modifica anche questo:
 

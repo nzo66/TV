@@ -4,6 +4,16 @@ Benvenuto nel tuo setup personalizzabile di **lista IPTV** con **EPG**, supporta
 
 ---
 
+## 🌟 **Cosa trovi nella tua lista?**
+
+- **🎥 Canali Pluto TV Italia**: Il meglio della TV italiana, con tutti i canali di Pluto TV sempre pronti a farti compagnia.
+
+- **⚽ Sezione Eventi Live**: Segui gli **eventi live** di **calcio**, **basket** e altri sport, per non perdere mai un secondo dei tuoi sport preferiti. 🔥
+
+- **📡 Sky e molto altro**: Tutti i contenuti esclusivi di **Sky**, film, serie TV, sport e molto altro. 📺✨
+
+---
+
 ## 🔗 Lista gia' pronta
 
 Queste liste utilizzano un proxy ospitato su HuggingFace Spaces.

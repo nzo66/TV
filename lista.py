@@ -550,15 +550,15 @@ def epg_eventi_generator():
                         announcement_start_time = datetime.combine(event_date, datetime.min.time())  # 00:00 dello stesso giorno
                         announcement_stop_time = event_datetime
     
-                        epg_content += f'  <programme start="{announcement_start_time.strftime("%Y%m%d%H%M%S") + " +0000"}" stop="{announcement_stop_time.strftime("%Y%m%d%H%M%S") + " +0000"}" channel="{channel_id}">\n'
+                        epg_content += f'  <programme start="{announcement_start_time.strftime("%Y%m%d%H%M%S") + " +0000"}" stop="{announcement_stop_time.strftime("%Y%m%d%H%M%S") + " +0200"}" channel="{channel_id}">\n'
                         epg_content += f'    <title lang="it">inizierà alle {(event_datetime + timedelta(hours=2)).strftime("%H:%M")}.</title>\n'
                         epg_content += f'    <desc lang="it">{event_name}.</desc>\n'
                         epg_content += f'    <category lang="it">Annuncio</category>\n'
                         epg_content += f'  </programme>\n'
     
                         # Formatta start e stop per l'evento principale
-                        start_time = event_datetime.strftime("%Y%m%d%H%M%S") + " +0000"
-                        stop_time = (event_datetime + timedelta(hours=2)).strftime("%Y%m%d%H%M%S") + " +0000"
+                        start_time = event_datetime.strftime("%Y%m%d%H%M%S") + " +0200"
+                        stop_time = (event_datetime + timedelta(hours=2)).strftime("%Y%m%d%H%M%S") + " +0200"
     
                         # Aggiunge l'evento principale nel file EPG
                         epg_content += f'  <programme start="{start_time}" stop="{stop_time}" channel="{channel_id}">\n'

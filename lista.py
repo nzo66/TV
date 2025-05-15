@@ -172,178 +172,195 @@ def eventi_m3u8_generator():
     # Aggiungi il codice del tuo script "eventi_m3u8_generator.py" in questa funzione.
     print("Eseguendo l'eventi_m3u8_generator.py...")
     # Il codice che avevi nello script "eventi_m3u8_generator.py" va qui, senza modifiche.
-    import requests
-    import random
-    import time
-    import json
+     import json
     import re
-    from bs4 import BeautifulSoup
+    import requests
+    from urllib.parse import quote
     from datetime import datetime, timedelta
+    from dateutil import parser
     
-    # Headers per le richieste HTTP
-    headers = { 
-        "Accept": "*/*",
-        "Accept-Language": "it-IT,it;q=0.9,en-US;q=0.8,en;q=0.7,es;q=0.6,ru;q=0.5",
-        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36",
+    PROXY = "https://nzo66-piccolotest.hf.space/proxy/m3u?url="  # Proxy HLS
+    JSON_FILE = "daddyliveSchedule.json"
+    OUTPUT_FILE = "eventi.m3u8"
+    BASE_URL = "https://thedaddy.to/embed/"
+    
+    HEADERS = {
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36"
     }
     
-    client = requests
-    channel_cache = {}
+    HTTP_TIMEOUT = 10
+    session = requests.Session()
+    session.headers.update(HEADERS)
     
-    # Funzione per pulire il testo rimuovendo tag HTML
-    def clean_text(text):
-        return re.sub(r'</?span.*?>', '', text)
+    def get_iframe_url(url):
+        try:
+            resp = session.post(url, timeout=HTTP_TIMEOUT)
+            resp.raise_for_status()
+            match = re.search(r'iframe src="([^"]+)"', resp.text)
+            return match.group(1) if match else None
+        except requests.RequestException as e:
+            print(f"[!] Errore richiesta iframe URL {url}: {e}")
+            return None
     
-    # Funzione per ottenere il link M3U8 per un canale
-    def get_stream_link(channel_id, max_retries=3):
-        if channel_id in channel_cache:
-            return channel_cache[channel_id]
+    def get_final_m3u8(iframe_url):
+        try:
+            parsed = re.search(r"https?://([^/]+)", iframe_url)
+            if not parsed:
+                print(f"[!] URL iframe non valido: {iframe_url}")
+                return None
+            referer_base = f"https://{parsed.group(1)}"
     
-        for attempt in range(max_retries):
+            page_resp = session.post(iframe_url, timeout=HTTP_TIMEOUT)
+            page_resp.raise_for_status()
+            page = page_resp.text
+    
+            key = re.search(r'var channelKey = "(.*?)"', page)
+            ts  = re.search(r'var authTs     = "(.*?)"', page)
+            rnd = re.search(r'var authRnd    = "(.*?)"', page)
+            sig = re.search(r'var authSig    = "(.*?)"', page)
+    
+            if not all([key, ts, rnd, sig]):
+                print(f"[!] Mancano variabili auth in pagina {iframe_url}")
+                return None
+    
+            channel_key = key.group(1)
+            auth_ts     = ts.group(1)
+            auth_rnd    = rnd.group(1)
+            auth_sig    = quote(sig.group(1), safe='')
+    
+            auth_url = f"https://top2new.newkso.ru/auth.php?channel_id={channel_key}&ts={auth_ts}&rnd={auth_rnd}&sig={auth_sig}"
+            session.get(auth_url, headers={"Referer": referer_base}, timeout=HTTP_TIMEOUT)
+    
+            lookup_url = f"{referer_base}/server_lookup.php?channel_id={quote(channel_key)}"
+            lookup = session.get(lookup_url, headers={"Referer": referer_base}, timeout=HTTP_TIMEOUT)
+            lookup.raise_for_status()
+            data = lookup.json()
+    
+            server_key = data.get("server_key")
+            if not server_key:
+                print(f"[!] server_key non trovato per channel {channel_key}")
+                return None
+    
+            if server_key == "top1/cdn":
+                return f"https://top1.newkso.ru/top1/cdn/{channel_key}/mono.m3u8"
+    
+            stream_url = (f"{PROXY}https://{server_key}new.newkso.ru/{server_key}/{channel_key}/mono.m3u8"
+                          f"?h_user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
+                          f"(KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36&h_referer=https://forcedtoplay.xyz/"
+                          f"&h_origin=https://forcedtoplay.xyz")
+            return stream_url
+    
+        except requests.RequestException as e:
+            print(f"[!] Errore richiesta get_final_m3u8: {e}")
+            return None
+        except json.JSONDecodeError:
+            print(f"[!] Errore parsing JSON da server_lookup per {iframe_url}")
+            return None
+    
+    def get_stream_from_channel_id(channel_id):
+        embed_url = f"{BASE_URL}stream-{channel_id}.php"
+        iframe = get_iframe_url(embed_url)
+        if iframe:
+            return get_final_m3u8(iframe)
+        return None
+    
+    def clean_category_name(name):
+        # Rimuove tag html come </span> o simili
+        return re.sub(r'<[^>]+>', '', name).strip()
+    
+    def extract_channels_from_json(path):
+        keywords = {"italy", "rai", "italia", "it"}
+        now = datetime.now()  # ora attuale completa (data+ora)
+    
+        with open(path, "r", encoding="utf-8") as f:
+            data = json.load(f)
+    
+        categorized_channels = {}
+    
+        for date_key, sections in data.items():
+            date_part = date_key.split(" - ")[0]
             try:
-                response = client.get(f"https://daddylive.mp/embed/stream-{channel_id}.php", headers=headers, timeout=10)
-                response.raise_for_status()
-    
-                soup = BeautifulSoup(response.text, 'html.parser')
-                iframe = soup.find('iframe', id='thatframe')
-    
-                if iframe and iframe.get('src'):
-                    real_link = iframe.get('src')
-                    parent_site_domain = real_link.split('/premiumtv')[0]
-                    server_key_link = f'{parent_site_domain}/server_lookup.php?channel_id=premium{channel_id}'
-    
-                    response_key = client.get(server_key_link, headers=headers, timeout=10)
-                    time.sleep(random.uniform(1, 3))
-                    response_key.raise_for_status()
-    
-                    server_key_data = response_key.json()
-                    if 'server_key' in server_key_data:
-                        server_key = server_key_data['server_key']
-                        stream_url = f"https://{server_key}new.newkso.ru/{server_key}/premium{channel_id}/mono.m3u8"
-    
-                        channel_cache[channel_id] = stream_url  # Salva nella cache
-                        return stream_url
-    
-            except requests.exceptions.RequestException:
-                time.sleep((2 ** attempt) + random.uniform(0, 1))
-    
-        return None  # Se tutte le prove falliscono
-    
-    # Funzione per generare il file M3U8
-    def generate_m3u8_from_json(json_data):
-        m3u8_content = '#EXTM3U\n'
-        current_datetime = datetime.now()
-    
-        for date, categories in json_data.items():
-            try:
-                date_str = re.sub(r'(\d+)(st|nd|rd|th)', r'\1', date.split(' - ')[0])
-                date_obj = datetime.strptime(date_str, "%A %d %B %Y")
-                event_date = date_obj.date()
-            except ValueError:
+                date_obj = parser.parse(date_part, fuzzy=True).date()
+            except Exception as e:
+                print(f"[!] Errore parsing data '{date_part}': {e}")
                 continue
     
-            if event_date < current_datetime.date():
-                continue  # Esclude eventi di giorni passati
+            # filtro solo per eventi del giorno corrente
+            if date_obj != now.date():
+                continue
     
-            for category, events in categories.items():
-                category_name = clean_text(category)
+            date_str = date_obj.strftime("%Y-%m-%d")
     
-                # Filtra solo gli eventi con almeno un canale disponibile
-                valid_events = []
-                for event_info in events:
-                    time_str = event_info["time"]
-                    event_name = event_info["event"]
+            for category_raw, event_items in sections.items():
+                category = clean_category_name(category_raw)
+                if category not in categorized_channels:
+                    categorized_channels[category] = []
     
+                for item in event_items:
+                    time_str = item.get("time", "00:00")
                     try:
-                        event_time = (datetime.strptime(time_str, "%H:%M") + timedelta(hours=2)).time()  # Aggiungi 2 ora
-                        event_datetime = datetime.combine(event_date, event_time)
-                    except ValueError:
-                        continue
+                        # Parse orario evento
+                        time_obj = datetime.strptime(time_str, "%H:%M") + timedelta(hours=2)  # correzione timezone?
     
-                    # Se l'evento è passato da più di 2 ore, lo esclude
-                    if event_datetime < current_datetime - timedelta(hours=2):
-                        continue  
+                        # crea datetime completo con data evento e orario evento
+                        event_datetime = datetime.combine(date_obj, time_obj.time())
     
-                    valid_channels = []
-                    for channel in event_info["channels"]:
-                        channel_name = clean_text(channel["channel_name"])
-                        channel_id = channel["channel_id"]
-                        stream_url = get_stream_link(channel_id)
+                        # Controllo: includi solo se l'evento è iniziato da meno di 2 ore
+                        if now - event_datetime > timedelta(hours=2):
+                            # Evento iniziato da più di 2 ore -> salto
+                            continue
     
-                        if stream_url:
-                            valid_channels.append({
-                                "channel_id": channel_id,
+                        time_formatted = time_obj.strftime("%H:%M")
+                    except Exception:
+                        time_formatted = time_str
+    
+                    event_title = item.get("event", "Evento")
+    
+                    for ch in item.get("channels", []):
+                        channel_name = ch.get("channel_name", "")
+                        channel_id = ch.get("channel_id", "")
+    
+                        words = set(re.findall(r'\b\w+\b', channel_name.lower()))
+                        if keywords.intersection(words):
+                            tvg_name = f"{event_title} ({time_formatted})"
+                            categorized_channels[category].append({
+                                "tvg_name": tvg_name,
                                 "channel_name": channel_name,
-                                "stream_url": stream_url
+                                "channel_id": channel_id
                             })
     
-                    if valid_channels:
-                        valid_events.append({
-                            "event_name": event_name,
-                            "event_date": event_date,
-                            "event_time": event_time,
-                            "channels": valid_channels
-                        })
+        return categorized_channels
     
-                # Aggiunge la categoria solo se ha eventi con canali validi
-                if valid_events:
-                    m3u8_content += f"#EXTINF:-1 tvg-name=\"----- {category_name} -----\" group-title=\"Eventi Live\", ----- {category_name} -----\n"
-                    m3u8_content += f"http://example.com/{category_name.replace(' ', '_')}.m3u8\n"
+    def generate_m3u_from_schedule(json_file, output_file):
+        categorized_channels = extract_channels_from_json(json_file)
     
-                    for event in valid_events:
-                        tvg_name = f"{event['event_name']} - {event['event_date'].strftime('%d/%m/%Y')} {event['event_time'].strftime('%H:%M')}"
-                        tvg_name = clean_text(tvg_name)
+        with open(output_file, "w", encoding="utf-8") as f:
+            f.write("#EXTM3U\n")
     
-                        for channel in event["channels"]:
-                            m3u8_content += f"#EXTINF:-1 tvg-id=\"{channel['channel_id']}\" tvg-name=\"{tvg_name}\" group-title=\"Eventi Live\" tvg-logo=\"\", {tvg_name}\n"
-                            m3u8_content += f"https://nzo66-piccolotest.hf.space/proxy/m3u?url={channel['stream_url']}&h_user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36&h_referer=https://ilovetoplay.xyz/&h_origin=https://ilovetoplay.xyz\n"
+            for category, channels in categorized_channels.items():
+                if not channels:
+                    continue
     
-        return m3u8_content
+                # Spacer con nome categoria pulito e group-title "Eventi Live"
+                f.write(f'#EXTINF:-1 tvg-name="{category}" group-title="Eventi Live",--- {category} ---\nhttps://exemple.m3u8\n\n')
     
-    # Funzione per caricare e filtrare il JSON (solo canali italiani)
-    def load_json(json_file):
-        with open(json_file, "r", encoding="utf-8") as file:
-            json_data = json.load(file)
+                for ch in channels:
+                    tvg_name = ch["tvg_name"]
+                    channel_id = ch["channel_id"]
     
-        filtered_data = {}
-        for date, categories in json_data.items():
-            filtered_categories = {}
+                    try:
+                        stream = get_stream_from_channel_id(channel_id)
+                        if stream:
+                            f.write(f'#EXTINF:-1 tvg-id="{channel_id}" tvg-name="{tvg_name}" group-title="Eventi Live",{tvg_name}\n{stream}\n\n')
+                            print(f"[✓] {tvg_name}")
+                        else:
+                            print(f"[✗] {tvg_name} - Nessuno stream trovato")
+                    except Exception as e:
+                        print(f"[!] Errore su {tvg_name}: {e}")
     
-            for category, events in categories.items():
-                filtered_events = []
-    
-                for event_info in events:
-                    filtered_channels = []
-    
-                    for channel in event_info["channels"]:
-                        channel_name = clean_text(channel["channel_name"])
-    
-                        # Filtro per "Italy", "Rai", "Italia", "IT"
-                        if re.search(r'\b(italy|rai|italia|it)\b', channel_name, re.IGNORECASE):
-                            filtered_channels.append(channel)
-    
-                    if filtered_channels:
-                        filtered_events.append({**event_info, "channels": filtered_channels})
-    
-                if filtered_events:
-                    filtered_categories[category] = filtered_events
-    
-            if filtered_categories:
-                filtered_data[date] = filtered_categories
-    
-        return filtered_data
-    
-    # Carica il JSON e filtra i canali italiani
-    json_data = load_json("daddyliveSchedule.json")
-    
-    # Genera il file M3U8
-    m3u8_content = generate_m3u8_from_json(json_data)
-    
-    # Salva il file M3U8
-    with open("eventi.m3u8", "w", encoding="utf-8") as file:
-        file.write(m3u8_content)
-    
-    print("✅ Generazione completata! Il file 'eventi.m3u8' è pronto.")
+    if __name__ == "__main__":
+        generate_m3u_from_schedule(JSON_FILE, OUTPUT_FILE)
+ 
 # Funzione per il quarto script (schedule_extractor.py)
 def schedule_extractor():
     # Codice del quarto script qui
@@ -625,6 +642,7 @@ def vavoo_italy_channels():
     import os
     import xml.etree.ElementTree as ET
     
+    PROXY = "https://nzo66-piccolotest.hf.space/proxy/m3u?url="
     EPG_FILE = "epg.xml"
     LOGOS_FILE = "logos.txt"
     OUTPUT_FILE = "channels_italy.m3u8"
@@ -735,7 +753,7 @@ def vavoo_italy_channels():
                     tvg_id = channel_id_map.get(normalized_name, "")
                     tvg_logo = logos_dict.get(tvg_name_cleaned.lower(), DEFAULT_TVG_ICON)
                     f.write(f'#EXTINF:-1 tvg-id="{tvg_id}" tvg-name="{tvg_name_cleaned}" tvg-logo="{tvg_logo}" group-title="{category}", {name}\n')
-                    f.write(f"https://nzo66-piccolotest.hf.space/proxy/m3u?url={url}\n\n")
+                    f.write(f"{PROXY}{url}\n\n")
     
     def main():
         epg_root = fetch_epg(EPG_FILE)
@@ -768,6 +786,7 @@ def world_channels_generator():
     import os
     from collections import defaultdict
     
+    PROXY = "https://nzo66-piccolotest.hf.space/proxy/m3u?url="
     OUTPUT_FILE = "world.m3u8"
     BASE_URLS = [
         "https://vavoo.to"
@@ -809,7 +828,7 @@ def world_channels_generator():
     
                 for name, url in grouped_channels[country]:
                     f.write(f'#EXTINF:-1 tvg-name="{name}" group-title="{country}", {name}\n')
-                    f.write(f"https://nzo66-piccolotest.hf.space/proxy/m3u?url={url}\n\n")
+                    f.write(f"{PROXY}{url}\n\n")
     
     # Funzione principale
     def main():

@@ -34,10 +34,6 @@ Se il proxy non funziona o vuoi avere il tuo, puoi:
 
 🔗 Repo del proxy: [tvproxy](https://github.com/nzo66/tvproxy)
 
-### Oppure:
-
-🔁 Usa [mediaflow-proxy](https://github.com/mhdzumair/mediaflow-proxy)
-
 ---
 
 ## 🛠️ Come personalizzare il proxy
@@ -55,27 +51,10 @@ Se il proxy non funziona o vuoi avere il tuo, puoi:
 Sostituisci tutte le occorrenze di:
 
 ```
-https://nzo66-piccolotest.hf.space
+https://nzo66-tvproxy.hf.space
 ```
 
 con **il tuo** URL HuggingFace, Render o self-hosted (es: `https://tuonome.hf.space`)
-
-#### 2️⃣ Se usi [mediaflow-proxy](https://github.com/mhdzumair/mediaflow-proxy)
-
-Modifica anche questo:
-
-```diff
-- /proxy/m3u?url=
-+ /proxy/hls/manifest.m3u8?api_password=test123&d=
-```
-
-> 🔒 Ricorda di sostituire `test123` con la **tua password** del mediaflow-proxy.
-
-📌 Il risultato sarà qualcosa del tipo:
-
-```
-https://tuoproxy.hf.space/proxy/hls/manifest.m3u8?api_password=miaPassword&d=
-```
 
 #### 3️⃣ URL dell’EPG
 

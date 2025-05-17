@@ -179,7 +179,7 @@ def eventi_m3u8_generator():
     from datetime import datetime, timedelta
     from dateutil import parser
     
-    PROXY = "https://nzo66-piccolotest.hf.space/proxy/m3u?url="  # Proxy HLS
+    PROXY = "https://nzo66-dlhd-proxy.hf.space/proxy/m3u?url="  # Proxy HLS
     JSON_FILE = "daddyliveSchedule.json"
     OUTPUT_FILE = "eventi.m3u8"
     BASE_URL = "https://thedaddy.to/embed/"

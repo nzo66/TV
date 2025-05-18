@@ -172,14 +172,14 @@ def eventi_m3u8_generator():
     # Aggiungi il codice del tuo script "eventi_m3u8_generator.py" in questa funzione.
     print("Eseguendo l'eventi_m3u8_generator.py...")
     # Il codice che avevi nello script "eventi_m3u8_generator.py" va qui, senza modifiche.
-     import json
+    import json
     import re
     import requests
     from urllib.parse import quote
     from datetime import datetime, timedelta
     from dateutil import parser
     
-    PROXY = "https://nzo66-tvproxy.hf.space/proxy/m3u?url="  # Proxy HLS
+    PROXY = "https://nzo66-tvproxy.hf.space"  # Proxy HLS
     JSON_FILE = "daddyliveSchedule.json"
     OUTPUT_FILE = "eventi.m3u8"
     BASE_URL = "https://thedaddy.to/embed/"
@@ -244,7 +244,7 @@ def eventi_m3u8_generator():
             if server_key == "top1/cdn":
                 return f"https://top1.newkso.ru/top1/cdn/{channel_key}/mono.m3u8"
     
-            stream_url = (f"{PROXY}https://{server_key}new.newkso.ru/{server_key}/{channel_key}/mono.m3u8"
+            stream_url = (f"{PROXY}/proxy/m3u?url=https://{server_key}new.newkso.ru/{server_key}/{channel_key}/mono.m3u8"
                           f"?h_user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
                           f"(KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36&h_referer=https://forcedtoplay.xyz/"
                           f"&h_origin=https://forcedtoplay.xyz")
@@ -642,7 +642,7 @@ def vavoo_italy_channels():
     import os
     import xml.etree.ElementTree as ET
     
-    PROXY = "https://nzo66-tvproxy.hf.space/proxy/m3u?url="
+    PROXY = "https://nzo66-tvproxy.hf.space"
     EPG_FILE = "epg.xml"
     LOGOS_FILE = "logos.txt"
     OUTPUT_FILE = "channels_italy.m3u8"
@@ -753,7 +753,7 @@ def vavoo_italy_channels():
                     tvg_id = channel_id_map.get(normalized_name, "")
                     tvg_logo = logos_dict.get(tvg_name_cleaned.lower(), DEFAULT_TVG_ICON)
                     f.write(f'#EXTINF:-1 tvg-id="{tvg_id}" tvg-name="{tvg_name_cleaned}" tvg-logo="{tvg_logo}" group-title="{category}", {name}\n')
-                    f.write(f"{PROXY}{url}\n\n")
+                    f.write(f"{PROXY}/proxy/m3u?url={url}\n\n")
     
     def main():
         epg_root = fetch_epg(EPG_FILE)
@@ -786,7 +786,7 @@ def world_channels_generator():
     import os
     from collections import defaultdict
     
-    PROXY = "https://nzo66-tvproxy.hf.space/proxy/m3u?url="
+    PROXY = "https://nzo66-tvproxy.hf.space"
     OUTPUT_FILE = "world.m3u8"
     BASE_URLS = [
         "https://vavoo.to"
@@ -828,7 +828,7 @@ def world_channels_generator():
     
                 for name, url in grouped_channels[country]:
                     f.write(f'#EXTINF:-1 tvg-name="{name}" group-title="{country}", {name}\n')
-                    f.write(f"{PROXY}{url}\n\n")
+                    f.write(f"{PROXY}/proxy/m3u?url={url}\n\n")
     
     # Funzione principale
     def main():

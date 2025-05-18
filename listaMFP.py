@@ -51,7 +51,7 @@ def merger_playlist():
     lista = playlist1 + "\n" + playlist2 + "\n" + playlist3 
     
     # Aggiungi intestazione EPG
-    lista = '#EXTM3U x-tvg-url="https://raw.githubusercontent.com/nzo66/TV/refs/heads/main/epg.xml"\n' + lista
+    lista = '#EXTM3U x-tvg-url="https://raw.githubusercontent.com/firexs909/Giamarco/refs/heads/main/epg.xml"\n' + lista
     
     # Salva in .m3u
     output_m3u = os.path.join(script_directory, "lista.m3u")

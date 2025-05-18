@@ -177,8 +177,8 @@ def eventi_m3u8_generator():
     
     JSON_FILE = "daddyliveSchedule.json"
     OUTPUT_FILE = "eventi.m3u8"
-    MFP_IP = "https://nzo66-mfpproxy.hf.space"  # Inserisci il tuo IP/porta MFP
-    MFP_PASSWORD = "test123"   # Inserisci la tua password API MFP
+    MFP_IP = "https://unhided.mac4.duckdns.org"  # Inserisci il tuo IP/porta MFP
+    MFP_PASSWORD = "mfp"   # Inserisci la tua password API MFP
     
     def clean_category_name(name):
         return re.sub(r'<[^>]+>', '', name).strip()
@@ -545,8 +545,8 @@ def vavoo_italy_channels():
     import os
     import xml.etree.ElementTree as ET
     
-    MFP_IP = "https://nzo66-mfpproxy.hf.space"
-    MFP_PASSWORD = "test123"
+    MFP_IP = "https://unhided.mac4.duckdns.org"
+    MFP_PASSWORD = "mfp"
     EPG_FILE = "epg.xml"
     LOGOS_FILE = "logos.txt"
     OUTPUT_FILE = "channels_italy.m3u8"

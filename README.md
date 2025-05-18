@@ -1,89 +1,112 @@
 # 📺 Lista IPTV + EPG con Proxy
 
-Benvenuto nel tuo setup personalizzabile di **lista IPTV** con **EPG**, supportata da un **proxy**
+Benvenuto nella tua **lista IPTV personalizzata** con **EPG** integrata e supporto proxy, perfetta per goderti i tuoi contenuti preferiti ovunque ti trovi!
 
 ---
 
-## 🌟 **Cosa trovi nella tua lista?**
+## 🌟 Cosa include la lista?
 
-- **🎥 Canali Pluto TV Italia**: Il meglio della TV italiana, con tutti i canali di Pluto TV sempre pronti a farti compagnia.
+- **🎥 Pluto TV Italia**  
+  Il meglio della TV italiana con tutti i canali Pluto TV sempre disponibili.
 
-- **⚽ Sezione Eventi Live**: Segui gli **eventi live** di **calcio**, **basket** e altri sport, per non perdere mai un secondo dei tuoi sport preferiti. 🔥
+- **⚽ Eventi Sportivi Live**  
+  Segui in diretta **calcio**, **basket** e altri sport. Non perderti neanche un’azione!
 
-- **📡 Sky e molto altro**: Tutti i contenuti esclusivi di **Sky**, film, serie TV, sport e molto altro. 📺✨
+- **📡 Sky e altro ancora**  
+  Contenuti esclusivi: film, serie TV, sport e molto di più direttamente da Sky.
 
 ---
 
-## 🔗 Lista gia' pronta
+## 🔗 Link pronti all’uso
 
-Queste liste utilizzano un proxy ospitato su HuggingFace Spaces.
+Queste liste utilizzano un proxy ospitato su **HuggingFace Spaces**.
 
-- **Lista M3U**:  
+- **Lista M3U**  
   [`https://raw.githubusercontent.com/nzo66/TV/refs/heads/main/lista.m3u`](https://raw.githubusercontent.com/nzo66/TV/refs/heads/main/lista.m3u)
 
-- **EPG XML**:  
+- **EPG XML**  
   [`https://raw.githubusercontent.com/nzo66/TV/refs/heads/main/epg.xml`](https://raw.githubusercontent.com/nzo66/TV/refs/heads/main/epg.xml)
 
 ---
 
-## 🧩 Funzionamento con Proxy
+## 🧩 Proxy: come funziona
 
-Se il proxy non funziona o vuoi avere il tuo, puoi:
+Se il proxy fornito non dovesse funzionare o preferisci crearne uno tuo, puoi farlo facilmente.
 
-### ✅ Creare il tuo proxy personalizzato:
+### ✅ Crea il tuo proxy personalizzato
 
-🔗 Repo del proxy: [tvproxy](https://github.com/nzo66/tvproxy)
+- **Proxy base**:  
+  [tvproxy (repo GitHub)](https://github.com/nzo66/tvproxy)
+
+- **Proxy alternativo più stabile**:  
+  [mediaflow-proxy](https://github.com/mhdzumair/mediaflow-proxy)
+
+- **Per HuggingFace**  
+  Usa questa repo ottimizzata: [hfmfp](https://github.com/nzo66/hfmfp)
 
 ---
 
-## 🛠️ Come personalizzare il proxy
+## ⚙️ Personalizza il tuo proxy
 
-1. **Fai il Fork** di questa repository.
+### 1. Fai il fork della repo
 
-2. Modifica il file `lista.py`. Se vuoi includere anche **canali esteri**, usa il branch `world`.
+Avvia creando un fork della repository proxy.
+
+### 2. Modifica `lista.py`  
+Per includere **canali esteri**, utilizza il branch `world`.
 
 ---
 
-### ✏️ Modifiche da effettuare:
+### ✏️ Modifiche necessarie
 
 #### 1️⃣ URL del Proxy
 
-Sostituisci tutte le occorrenze di:
+Nel file `lista.py`, sostituisci:
 
 ```
 https://nzo66-tvproxy.hf.space
 ```
 
-con **il tuo** URL HuggingFace, Render o self-hosted (es: `https://tuonome.hf.space`)
+con il tuo URL personalizzato (es. `https://tuonome.hf.space`, Render o self-hosted).
 
-#### 3️⃣ URL dell’EPG
+> Se utilizzi **mediaflow-proxy**, lavora invece sul file `listaMFP.py`  
+> Sostituisci:
 
-Cerca questo link (sempre nel file lista.py):
+```
+https://nzo66-mfpproxy.hf.space
+```
+
+> E ricorda di aggiornare anche il file `.github/workflows/main.yml` con `listaMFP.py` nella riga 27.
+
+---
+
+#### 2️⃣ URL dell’EPG
+
+Cerca e sostituisci:
 
 ```
 https://raw.githubusercontent.com/nzo66/TV/refs/heads/main/epg.xml
 ```
 
-E sostituisci:
+con il link del tuo fork, ad esempio:
 
 ```
-nzo66/TV
+https://raw.githubusercontent.com/tuonome/TV/refs/heads/main/epg.xml
 ```
-
-con il tuo utente GitHub e il nome del fork (es. `tuonome/TV`).
 
 ---
 
-## 🚀 Esecuzione con GitHub Actions
+## 🚀 Esecuzione automatica con GitHub Actions
 
-Una volta fatte le modifiche:
+Dopo le modifiche:
 
-1. Vai su **Actions** nella tua repo
-2. Avvia lo script manualmente
-3. ✅ Assicurati di **abilitare i permessi di GitHub Actions** per questa repo
+1. Vai sulla sezione **Actions** della tua repo  
+2. Avvia manualmente lo script  
+3. Assicurati che **GitHub Actions sia abilitato** nella repository
 
 ---
 
-## 🤝 Supporto
+## 🤝 Hai bisogno di aiuto?
 
-Hai dubbi o vuoi contribuire? Apri una issue o una pull request!
+Apri una **issue** o proponi un miglioramento con una **pull request**.  
+Contribuire è sempre benvenuto!

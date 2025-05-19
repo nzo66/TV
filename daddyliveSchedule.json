@@ -8035,6 +8035,11 @@
                 ]
             },
             {
+                "time": "11:45",
+                "event": "Singapore - Premier League : Young Lions vs Hougang United",
+                "channels": []
+            },
+            {
                 "time": "14:45",
                 "event": "Bulgaria - Parva Liga : CSKA 1948 vs Krumovgrad",
                 "channels": [
@@ -8529,6 +8534,11 @@
                 ]
             },
             {
+                "time": "21:00",
+                "event": "Uruguay - Primera Division : Plaza Colonia vs Danubio",
+                "channels": []
+            },
+            {
                 "time": "22:00",
                 "event": "Argentina - Primera Divisi\u00f3n : Argentinos Juniors vs San Lorenzo",
                 "channels": [
@@ -8727,6 +8737,436 @@
                 ]
             }
         ],
+        "Tennis ROLAND GARROS QUALIFYING</span>": [
+            {
+                "time": "08:00",
+                "event": "Court Suzanne-Lenglen",
+                "channels": [
+                    {
+                        "channel_name": "Tennis Stream",
+                        "channel_id": "1511"
+                    }
+                ]
+            },
+            {
+                "time": "08:00",
+                "event": "Court 14",
+                "channels": [
+                    {
+                        "channel_name": "Tennis Stream",
+                        "channel_id": "1512"
+                    }
+                ]
+            },
+            {
+                "time": "08:00",
+                "event": "Court 7",
+                "channels": [
+                    {
+                        "channel_name": "Tennis Stream",
+                        "channel_id": "1513"
+                    }
+                ]
+            },
+            {
+                "time": "08:00",
+                "event": "Court 6",
+                "channels": [
+                    {
+                        "channel_name": "Tennis Stream",
+                        "channel_id": "1514"
+                    }
+                ]
+            },
+            {
+                "time": "08:00",
+                "event": "Court 2",
+                "channels": [
+                    {
+                        "channel_name": "Tennis Stream",
+                        "channel_id": "1515"
+                    }
+                ]
+            },
+            {
+                "time": "08:00",
+                "event": "Court 3",
+                "channels": [
+                    {
+                        "channel_name": "Tennis Stream",
+                        "channel_id": "1516"
+                    }
+                ]
+            },
+            {
+                "time": "08:00",
+                "event": "Court 4",
+                "channels": [
+                    {
+                        "channel_name": "Tennis Stream",
+                        "channel_id": "1517"
+                    }
+                ]
+            },
+            {
+                "time": "08:00",
+                "event": "Court 5",
+                "channels": [
+                    {
+                        "channel_name": "Tennis Stream",
+                        "channel_id": "1518"
+                    }
+                ]
+            },
+            {
+                "time": "08:00",
+                "event": "Court 8",
+                "channels": [
+                    {
+                        "channel_name": "Tennis Stream",
+                        "channel_id": "1519"
+                    }
+                ]
+            },
+            {
+                "time": "08:00",
+                "event": "Court 9",
+                "channels": [
+                    {
+                        "channel_name": "Tennis Stream",
+                        "channel_id": "1521"
+                    }
+                ]
+            },
+            {
+                "time": "08:00",
+                "event": "Court 10",
+                "channels": [
+                    {
+                        "channel_name": "Tennis Stream",
+                        "channel_id": "1522"
+                    }
+                ]
+            },
+            {
+                "time": "08:00",
+                "event": "Court 11",
+                "channels": [
+                    {
+                        "channel_name": "Tennis Stream",
+                        "channel_id": "1523"
+                    }
+                ]
+            },
+            {
+                "time": "08:00",
+                "event": "Court 12",
+                "channels": [
+                    {
+                        "channel_name": "Tennis Stream",
+                        "channel_id": "1524"
+                    }
+                ]
+            },
+            {
+                "time": "08:00",
+                "event": "Court 13",
+                "channels": [
+                    {
+                        "channel_name": "Tennis Stream",
+                        "channel_id": "1525"
+                    }
+                ]
+            }
+        ],
+        "Tennis ATP - HAMBURG</span>": [
+            {
+                "time": "10:00",
+                "event": "ATP - HAMBURG : Collignon R. vs Nakashima B.",
+                "channels": [
+                    {
+                        "channel_name": "Tennis Stream",
+                        "channel_id": "1507"
+                    }
+                ]
+            },
+            {
+                "time": "11:00",
+                "event": "ATP - HAMBURG : Giron M. vs Bautista-Agut R.",
+                "channels": [
+                    {
+                        "channel_name": "Tennis Stream",
+                        "channel_id": "1508"
+                    }
+                ]
+            },
+            {
+                "time": "11:30",
+                "event": "ATP - HAMBURG : Rublev A. vs Dzumhur D.",
+                "channels": [
+                    {
+                        "channel_name": "Tennis Stream",
+                        "channel_id": "1507"
+                    }
+                ]
+            },
+            {
+                "time": "12:30",
+                "event": "ATP - HAMBURG : Gojo B. vs Lehecka J.",
+                "channels": [
+                    {
+                        "channel_name": "Tennis Stream",
+                        "channel_id": "1508"
+                    }
+                ]
+            },
+            {
+                "time": "12:30",
+                "event": "ATP - HAMBURG : Ymer E. vs Muller A.",
+                "channels": []
+            },
+            {
+                "time": "13:30",
+                "event": "ATP - HAMBURG : Zverev A. vs Kovacevic A.",
+                "channels": [
+                    {
+                        "channel_name": "Tennis Stream",
+                        "channel_id": "1507"
+                    }
+                ]
+            },
+            {
+                "time": "16:00",
+                "event": "ATP - HAMBURG : Struff J-L. vs Engel J.",
+                "channels": [
+                    {
+                        "channel_name": "Tennis Stream",
+                        "channel_id": "1507"
+                    }
+                ]
+            }
+        ],
+        "Tennis ATP - GENEVA</span>": [
+            {
+                "time": "09:30",
+                "event": "ATP - GENEVA : Lajovic D. vs Fearnley J.",
+                "channels": [
+                    {
+                        "channel_name": "Tennis Stream",
+                        "channel_id": "1506"
+                    }
+                ]
+            },
+            {
+                "time": "10:30",
+                "event": "ATP - GENEVA : Ofner S. vs Gakhov I.",
+                "channels": []
+            },
+            {
+                "time": "11:00",
+                "event": "ATP - GENEVA : Nishikori K. vs Tien L.",
+                "channels": [
+                    {
+                        "channel_name": "Tennis Stream",
+                        "channel_id": "1506"
+                    }
+                ]
+            },
+            {
+                "time": "12:00",
+                "event": "ATP - GENEVA : Munar J. vs Halys Q.",
+                "channels": []
+            },
+            {
+                "time": "12:30",
+                "event": "ATP - GENEVA : Arnaldi M. vs Gaston H.",
+                "channels": [
+                    {
+                        "channel_name": "Tennis Stream",
+                        "channel_id": "1506"
+                    }
+                ]
+            },
+            {
+                "time": "16:00",
+                "event": "ATP - GENEVA : Norrie C. vs Stricker D.",
+                "channels": [
+                    {
+                        "channel_name": "Tennis Stream",
+                        "channel_id": "1506"
+                    }
+                ]
+            },
+            {
+                "time": "17:30",
+                "event": "ATP - GENEVA : Fucsovics M. vs Bergs Z.",
+                "channels": [
+                    {
+                        "channel_name": "Tennis Stream",
+                        "channel_id": "1506"
+                    }
+                ]
+            }
+        ],
+        "Tennis WTA - STRASBOURG</span>": [
+            {
+                "time": "09:00",
+                "event": "WTA - STRASBOURG : Cornet A. vs Bouzkova M.",
+                "channels": [
+                    {
+                        "channel_name": "Tennis Stream",
+                        "channel_id": "1501"
+                    }
+                ]
+            },
+            {
+                "time": "09:00",
+                "event": "WTA - STRASBOURG : Kessler M. vs Krueger A.",
+                "channels": [
+                    {
+                        "channel_name": "Tennis Stream",
+                        "channel_id": "1502"
+                    }
+                ]
+            },
+            {
+                "time": "10:30",
+                "event": "WTA - STRASBOURG : Haddad Maia B. vs Tauson C.",
+                "channels": [
+                    {
+                        "channel_name": "Tennis Stream",
+                        "channel_id": "1501"
+                    }
+                ]
+            },
+            {
+                "time": "10:30",
+                "event": "WTA - STRASBOURG : Wang Xin. vs Lys E.",
+                "channels": [
+                    {
+                        "channel_name": "Tennis Stream",
+                        "channel_id": "1502"
+                    }
+                ]
+            },
+            {
+                "time": "12:00",
+                "event": "WTA - STRASBOURG : Collins D. vs Kenin S.",
+                "channels": [
+                    {
+                        "channel_name": "Tennis Stream",
+                        "channel_id": "1501"
+                    }
+                ]
+            },
+            {
+                "time": "12:00",
+                "event": "WTA - STRASBOURG : Kalinskaya A. vs Dolehide C.",
+                "channels": [
+                    {
+                        "channel_name": "Tennis Stream",
+                        "channel_id": "1502"
+                    }
+                ]
+            },
+            {
+                "time": "13:30",
+                "event": "WTA - STRASBOURG : Frech M. vs Blinkova A.",
+                "channels": [
+                    {
+                        "channel_name": "Tennis Stream",
+                        "channel_id": "1502"
+                    }
+                ]
+            },
+            {
+                "time": "15:30",
+                "event": "WTA - STRASBOURG : Raducanu E. vs Kasatkina D.",
+                "channels": [
+                    {
+                        "channel_name": "Tennis Stream",
+                        "channel_id": "1515"
+                    }
+                ]
+            }
+        ],
+        "Tennis WTA - RABAT</span>": [
+            {
+                "time": "10:00",
+                "event": "WTA - RABAT : Alves C. vs Volynets K.",
+                "channels": []
+            },
+            {
+                "time": "10:00",
+                "event": "WTA - RABAT : Li A. vs Timofeeva M.",
+                "channels": [
+                    {
+                        "channel_name": "Tennis Stream",
+                        "channel_id": "1504"
+                    }
+                ]
+            },
+            {
+                "time": "10:00",
+                "event": "WTA - RABAT : Tomljanovic A. vs Tomova V.",
+                "channels": [
+                    {
+                        "channel_name": "Tennis Stream",
+                        "channel_id": "1503"
+                    }
+                ]
+            },
+            {
+                "time": "11:30",
+                "event": "WTA - RABAT : Baptiste H. vs Rosatello C.",
+                "channels": []
+            },
+            {
+                "time": "11:30",
+                "event": "WTA - RABAT : Cristian J. vs Kotliar Y.",
+                "channels": [
+                    {
+                        "channel_name": "Tennis Stream",
+                        "channel_id": "1504"
+                    }
+                ]
+            },
+            {
+                "time": "11:30",
+                "event": "WTA - RABAT : Sonmez Z. vs Bronzetti L.",
+                "channels": [
+                    {
+                        "channel_name": "Tennis Stream",
+                        "channel_id": "1503"
+                    }
+                ]
+            },
+            {
+                "time": "13:00",
+                "event": "WTA - RABAT : Bouzas Maneiro J. vs Grabher J.",
+                "channels": [
+                    {
+                        "channel_name": "Tennis Stream",
+                        "channel_id": "1504"
+                    }
+                ]
+            },
+            {
+                "time": "13:00",
+                "event": "WTA - RABAT : Cocciaretto E. vs Osorio C.",
+                "channels": [
+                    {
+                        "channel_name": "Tennis Stream",
+                        "channel_id": "1503"
+                    }
+                ]
+            },
+            {
+                "time": "13:00",
+                "event": "WTA - RABAT : Pieri T. vs Martinez Cirez C.",
+                "channels": []
+            }
+        ],
         "Tennis</span>": [
             {
                 "time": "09:00",
@@ -8837,6 +9277,276 @@
                         "channel_id": "148"
                     }
                 ]
+            },
+            {
+                "time": "03:20",
+                "event": "UTR (M) - Urayasu (JAP) : Stefan Harangozo vs Ko Nagashima",
+                "channels": []
+            },
+            {
+                "time": "03:20",
+                "event": "UTR (M) - Urayasu (JAP) : Toa Maeda vs Ryotero Matsumura",
+                "channels": []
+            },
+            {
+                "time": "06:00",
+                "event": "Challenger - Tbilisi (GEO) - Qualifiers : Clement Chidekh vs Nathan Trouve",
+                "channels": []
+            },
+            {
+                "time": "06:00",
+                "event": "Challenger - Tbilisi (GEO) - Qualifiers : Giles Hussey vs Erik Arutiunian",
+                "channels": []
+            },
+            {
+                "time": "06:00",
+                "event": "Challenger - Tbilisi (GEO) - Qualifiers : Lukas Pokorny vs Tibo Colson",
+                "channels": []
+            },
+            {
+                "time": "07:00",
+                "event": "UTR (M) - Budapest (UNG) : David Petrovic vs Marcell Bartakovics",
+                "channels": []
+            },
+            {
+                "time": "07:10",
+                "event": "UTR (F) - Pazardzhik (BGR) : Alexia-Shara Iancu vs Olga Molchanova",
+                "channels": []
+            },
+            {
+                "time": "07:10",
+                "event": "UTR (F) - Pazardzhik (BGR) : Beatris Spasova vs Alexandrova Ralitsa",
+                "channels": []
+            },
+            {
+                "time": "07:10",
+                "event": "Challenger - Tbilisi (GEO) - Qualifiers : Martin Damm Jr vs Ajeet Rai",
+                "channels": []
+            },
+            {
+                "time": "07:10",
+                "event": "Challenger - Tbilisi (GEO) - Qualifiers : Maximus Jones vs Fabrizio Andaloro",
+                "channels": []
+            },
+            {
+                "time": "07:10",
+                "event": "Challenger - Tbilisi (GEO) - Qualifiers : Semen Pankin vs Sergey Fomin",
+                "channels": []
+            },
+            {
+                "time": "08:10",
+                "event": "UTR (M) - Budapest (UNG) : Karel Froemel vs Gergely Madarasz",
+                "channels": []
+            },
+            {
+                "time": "08:10",
+                "event": "UTR (F) - Budapest (UNG) : Nicole Lukesova vs Nika Hurkacz",
+                "channels": []
+            },
+            {
+                "time": "08:10",
+                "event": "UTR (M) - Budapest (UNG) : Patrik Meszaros vs Rafael KIS Balazs",
+                "channels": []
+            },
+            {
+                "time": "08:20",
+                "event": "UTR (F) - Pazardzhik (BGR) : Aleksandra Mateva vs Gebriela Mihaylova",
+                "channels": []
+            },
+            {
+                "time": "08:30",
+                "event": "Challenger - Skopje (MKD) - Qualifiers : Daniel Michalski vs Lilian Marmousez",
+                "channels": []
+            },
+            {
+                "time": "08:30",
+                "event": "Challenger - Skopje (MKD) - Qualifiers : Manas Manoj Dhamne vs Martin Krumich",
+                "channels": []
+            },
+            {
+                "time": "09:00",
+                "event": "ATP - Geneva (ELV) - Double : G.Andreozzi/T.Arribage vs R.Matos/M.Melo",
+                "channels": []
+            },
+            {
+                "time": "09:00",
+                "event": "Challenger - Tbilisi (GEO) : Johannus Monday vs Philip Henning",
+                "channels": []
+            },
+            {
+                "time": "09:00",
+                "event": "Challenger - Tbilisi (GEO) : Masamichi Imamura vs Ilya Snitari",
+                "channels": []
+            },
+            {
+                "time": "09:00",
+                "event": "Challenger - Tbilisi (GEO) : Robert Strombachs vs Kasidit Samrej",
+                "channels": []
+            },
+            {
+                "time": "09:30",
+                "event": "ATP - Geneva (ELV) : Dusan Lajovic vs Jacob Fearnley",
+                "channels": []
+            },
+            {
+                "time": "09:30",
+                "event": "UTR (M) - Budapest (UNG) : Gabor Hornung vs Illya Beloborodko",
+                "channels": []
+            },
+            {
+                "time": "09:30",
+                "event": "UTR (M) - Budapest (UNG) : Mate Valkusz vs Edison Ambarzumjan",
+                "channels": []
+            },
+            {
+                "time": "09:30",
+                "event": "UTR (F) - Pazardzhik (BGR) : Mia Sarcev vs Rianna Ioana Coreisa",
+                "channels": []
+            },
+            {
+                "time": "09:30",
+                "event": "UTR (F) - Budapest (UNG) : Victoria Kapcia vs Antonina Czajka",
+                "channels": []
+            },
+            {
+                "time": "10:00",
+                "event": "Challenger - Skopje (MKD) : Luka Mikrut vs Mika Brunold",
+                "channels": []
+            },
+            {
+                "time": "10:00",
+                "event": "Challenger - Skopje (MKD) - Qualifiers : Nerman Fatic vs Gerard Campana Lee",
+                "channels": []
+            },
+            {
+                "time": "10:00",
+                "event": "ATP - Hamburg (GER) : Raphael Collignon vs Brandon Nakashima",
+                "channels": []
+            },
+            {
+                "time": "10:00",
+                "event": "Challenger - Skopje (MKD) - Qualifiers : Toby Alex Kodat vs Michael Vrbensky",
+                "channels": []
+            },
+            {
+                "time": "10:10",
+                "event": "Challenger - Tbilisi (GEO) : Fajing Sun vs Daniil Glinka",
+                "channels": []
+            },
+            {
+                "time": "10:10",
+                "event": "Challenger - Tbilisi (GEO) : Petr Bar Biryukov vs Federico Cina",
+                "channels": []
+            },
+            {
+                "time": "10:10",
+                "event": "ATP - Geneva (ELV) : Sebastian Ofner vs Ivan Gakhov",
+                "channels": []
+            },
+            {
+                "time": "10:40",
+                "event": "ATP - Geneva (ELV) : Kei Nishikori vs Learner Tien",
+                "channels": []
+            },
+            {
+                "time": "10:40",
+                "event": "UTR (M) - Budapest (UNG) : Peter Sallay vs Frane Nincevic",
+                "channels": []
+            },
+            {
+                "time": "11:00",
+                "event": "ATP - Hamburg (GER) : Marcos Giron vs Roberto Bautista Agut",
+                "channels": []
+            },
+            {
+                "time": "11:10",
+                "event": "Challenger - Skopje (MKD) - Qualifiers : Andrew Paulson vs Neil Oberleitner",
+                "channels": []
+            },
+            {
+                "time": "11:10",
+                "event": "ATP - Hamburg (GER) : Andrey Rublev vs Damir Dzumhur",
+                "channels": []
+            },
+            {
+                "time": "11:10",
+                "event": "Challenger - Skopje (MKD) - Qualifiers : Matej Dodig vs Franco Agamenone",
+                "channels": []
+            },
+            {
+                "time": "11:20",
+                "event": "ATP - Geneva (ELV) : Jaume Munar vs Quentin Halys",
+                "channels": []
+            },
+            {
+                "time": "11:50",
+                "event": "ATP - Geneva (ELV) : Matteo Arnaldi vs Hugo Gaston",
+                "channels": []
+            },
+            {
+                "time": "12:00",
+                "event": "Challenger - Skopje (MKD) : Joel Josef Schwarzler vs Gonzalo Bueno",
+                "channels": []
+            },
+            {
+                "time": "12:10",
+                "event": "ATP - Hamburg (GER) : Borna Gojo vs Jiri Lehecka",
+                "channels": []
+            },
+            {
+                "time": "12:30",
+                "event": "ATP - Hamburg (GER) : Elias Ymer vs Alexandre Muller",
+                "channels": []
+            },
+            {
+                "time": "12:30",
+                "event": "ATP - Geneva (ELV) - Double : M.Ebden/J.Peers vs P.H.Herbert/N.Mahut",
+                "channels": []
+            },
+            {
+                "time": "13:00",
+                "event": "Challenger - Skopje (MKD) : Viktor Durasovic vs Stefano Travaglia",
+                "channels": []
+            },
+            {
+                "time": "13:30",
+                "event": "ATP - Hamburg (GER) : Alexander Zverev vs Aleksandar Kovacevic",
+                "channels": []
+            },
+            {
+                "time": "13:30",
+                "event": "Challenger - Skopje (MKD) : Yanaki Milev vs Marat Sharipov",
+                "channels": []
+            },
+            {
+                "time": "16:00",
+                "event": "UTR (M) - Urbana (USA) : Arman Zamani vs Chad Kissell",
+                "channels": []
+            },
+            {
+                "time": "16:00",
+                "event": "ATP - Geneva (ELV) : Cameron Norrie vs Dominic Stephan Stricker",
+                "channels": []
+            },
+            {
+                "time": "16:00",
+                "event": "ATP - Hamburg (GER) : Jan-Lennard Struff vs Justin Engel",
+                "channels": []
+            },
+            {
+                "time": "17:10",
+                "event": "UTR (M) - Urbana (USA) : Asahi Harazaki vs Cameron Muller",
+                "channels": []
+            },
+            {
+                "time": "17:10",
+                "event": "ATP - Geneva (ELV) : Marton Fucsovics vs Zizou Bergs",
+                "channels": []
+            },
+            {
+                "time": "17:10",
+                "event": "UTR (F) - Urbana (USA) : Taylor Goetz vs Paula Cerda",
+                "channels": []
             }
         ],
         "Motorsport</span>": [
@@ -9233,6 +9943,11 @@
                 ]
             },
             {
+                "time": "16:00",
+                "event": "Turkey - TBL - Playoff : MKE Ankaragucu vs Esenler Erokspor",
+                "channels": []
+            },
+            {
                 "time": "17:00",
                 "event": "VTB United League : Lokomotiv Kuban vs Zenit Petersburg",
                 "channels": [
@@ -9281,6 +9996,11 @@
                         "channel_id": "141"
                     }
                 ]
+            },
+            {
+                "time": "18:00",
+                "event": "Italy - Serie B - Playoff : LUISS Roma vs Legnano",
+                "channels": []
             },
             {
                 "time": "18:30",
@@ -9352,6 +10072,26 @@
             }
         ],
         "Handball</span>": [
+            {
+                "time": "17:00",
+                "event": "Germany - Bundesliga : Goppingen vs Fuchse Berlin",
+                "channels": []
+            },
+            {
+                "time": "17:00",
+                "event": "Germany - Bundesliga : Leipzig vs Hamburg",
+                "channels": []
+            },
+            {
+                "time": "17:00",
+                "event": "Germany - Bundesliga : Lemgo vs Bietigheim",
+                "channels": []
+            },
+            {
+                "time": "18:00",
+                "event": "Germany - Bundesliga : Melsungen vs Wetzlar",
+                "channels": []
+            },
             {
                 "time": "18:00",
                 "event": "Handball-Bundesliga : SC Magdeburg vs Hannover-Burgdorf",

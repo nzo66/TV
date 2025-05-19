@@ -177,7 +177,7 @@ def eventi_m3u8_generator():
     from datetime import datetime, timedelta
     from dateutil import parser
     
-    PROXY = "https://nzo66-tvproxy.hf.space/proxy/m3u?url="  # Proxy HLS
+    PROXY = "https://tvproxy.mac4.duckdns.org/proxy/m3u?url="  # Proxy HLS
     JSON_FILE = "daddyliveSchedule.json"
     OUTPUT_FILE = "eventi.m3u8"
     BASE_URL = "https://thedaddy.to/embed/"
@@ -627,7 +627,7 @@ def vavoo_italy_channels():
     import os
     import xml.etree.ElementTree as ET
     
-    PROXY = "https://nzo66-tvproxy.hf.space/proxy/m3u?url="
+    PROXY = "https://tvproxy.mac4.duckdns.org/proxy/m3u?url="
     EPG_FILE = "epg.xml"
     LOGOS_FILE = "logos.txt"
     OUTPUT_FILE = "channels_italy.m3u8"

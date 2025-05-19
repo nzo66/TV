@@ -1,16 +1,16 @@
 #EXTM3U x-tvg-url="https://raw.githubusercontent.com/firexs909/Giamarco/refs/heads/main/epg.xml"
 
 #EXTINF:-1 tvg-id="rai1.it" tvg-name="RAI 1" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/rai-1-it.png" group-title="Rai", RAI 1
-https://unhided.mac4.duckdns.org/proxy/hls/manifest.m3u8?api_password=mfp&d=https://vavoo.to/play/1225653759/index.m3u8
-
-#EXTINF:-1 tvg-id="rai1.it" tvg-name="RAI 1" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/rai-1-it.png" group-title="Rai", RAI 1 (2)
 https://unhided.mac4.duckdns.org/proxy/hls/manifest.m3u8?api_password=mfp&d=https://vavoo.to/play/875922788/index.m3u8
 
+#EXTINF:-1 tvg-id="rai1.it" tvg-name="RAI 1" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/rai-1-it.png" group-title="Rai", RAI 1 (2)
+https://unhided.mac4.duckdns.org/proxy/hls/manifest.m3u8?api_password=mfp&d=https://vavoo.to/play/1225653759/index.m3u8
+
 #EXTINF:-1 tvg-id="rai2.it" tvg-name="RAI 2" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/rai-2-it.png" group-title="Rai", RAI 2
-https://unhided.mac4.duckdns.org/proxy/hls/manifest.m3u8?api_password=mfp&d=https://vavoo.to/play/1939210164/index.m3u8
+https://unhided.mac4.duckdns.org/proxy/hls/manifest.m3u8?api_password=mfp&d=https://vavoo.to/play/246253359/index.m3u8
 
 #EXTINF:-1 tvg-id="rai2.it" tvg-name="RAI 2" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/rai-2-it.png" group-title="Rai", RAI 2 (2)
-https://unhided.mac4.duckdns.org/proxy/hls/manifest.m3u8?api_password=mfp&d=https://vavoo.to/play/246253359/index.m3u8
+https://unhided.mac4.duckdns.org/proxy/hls/manifest.m3u8?api_password=mfp&d=https://vavoo.to/play/1939210164/index.m3u8
 
 #EXTINF:-1 tvg-id="rai3.it" tvg-name="RAI 3" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/rai-3-it.png" group-title="Rai", RAI 3
 https://unhided.mac4.duckdns.org/proxy/hls/manifest.m3u8?api_password=mfp&d=https://vavoo.to/play/1324733956/index.m3u8
@@ -64,10 +64,10 @@ https://unhided.mac4.duckdns.org/proxy/hls/manifest.m3u8?api_password=mfp&d=http
 https://unhided.mac4.duckdns.org/proxy/hls/manifest.m3u8?api_password=mfp&d=https://vavoo.to/play/2861734300/index.m3u8
 
 #EXTINF:-1 tvg-id="raiscuola.it" tvg-name="RAI SCUOLA" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/rai-scuola-it.png" group-title="Rai", RAI SCUOLA
-https://unhided.mac4.duckdns.org/proxy/hls/manifest.m3u8?api_password=mfp&d=https://vavoo.to/play/2007798511/index.m3u8
+https://unhided.mac4.duckdns.org/proxy/hls/manifest.m3u8?api_password=mfp&d=https://vavoo.to/play/1886684667/index.m3u8
 
 #EXTINF:-1 tvg-id="raiscuola.it" tvg-name="RAI SCUOLA" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/rai-scuola-it.png" group-title="Rai", RAI SCUOLA (2)
-https://unhided.mac4.duckdns.org/proxy/hls/manifest.m3u8?api_password=mfp&d=https://vavoo.to/play/1886684667/index.m3u8
+https://unhided.mac4.duckdns.org/proxy/hls/manifest.m3u8?api_password=mfp&d=https://vavoo.to/play/2007798511/index.m3u8
 
 #EXTINF:-1 tvg-id="raisport.it" tvg-name="RAI SPORT" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/italy/rai-sport-it.png" group-title="Rai", RAI SPORT
 https://unhided.mac4.duckdns.org/proxy/hls/manifest.m3u8?api_password=mfp&d=https://vavoo.to/play/2924135092/index.m3u8
@@ -187,10 +187,10 @@ https://unhided.mac4.duckdns.org/proxy/hls/manifest.m3u8?api_password=mfp&d=http
 https://unhided.mac4.duckdns.org/proxy/hls/manifest.m3u8?api_password=mfp&d=https://vavoo.to/play/3445562519/index.m3u8
 
 #EXTINF:-1 tvg-id="skysportarena.it" tvg-name="SKY SPORT ARENA" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/sky-sport-arena-it.png" group-title="Sport", SKY SPORT ARENA
-https://unhided.mac4.duckdns.org/proxy/hls/manifest.m3u8?api_password=mfp&d=https://vavoo.to/play/2555960713/index.m3u8
+https://unhided.mac4.duckdns.org/proxy/hls/manifest.m3u8?api_password=mfp&d=https://vavoo.to/play/3007400791/index.m3u8
 
 #EXTINF:-1 tvg-id="skysportarena.it" tvg-name="SKY SPORT ARENA" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/sky-sport-arena-it.png" group-title="Sport", SKY SPORT ARENA (2)
-https://unhided.mac4.duckdns.org/proxy/hls/manifest.m3u8?api_password=mfp&d=https://vavoo.to/play/3007400791/index.m3u8
+https://unhided.mac4.duckdns.org/proxy/hls/manifest.m3u8?api_password=mfp&d=https://vavoo.to/play/2555960713/index.m3u8
 
 #EXTINF:-1 tvg-id="skysportcalcio.it" tvg-name="SKY SPORT CALCIO" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/sky-sport-calcio-it.png" group-title="Sport", SKY SPORT CALCIO
 https://unhided.mac4.duckdns.org/proxy/hls/manifest.m3u8?api_password=mfp&d=https://vavoo.to/play/1665920101/index.m3u8
@@ -208,10 +208,10 @@ https://unhided.mac4.duckdns.org/proxy/hls/manifest.m3u8?api_password=mfp&d=http
 https://unhided.mac4.duckdns.org/proxy/hls/manifest.m3u8?api_password=mfp&d=https://vavoo.to/play/1989309231/index.m3u8
 
 #EXTINF:-1 tvg-id="skysportgolf.it" tvg-name="SKY SPORT GOLF" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/sky-sport-golf-it.png" group-title="Sport", SKY SPORT GOLF
-https://unhided.mac4.duckdns.org/proxy/hls/manifest.m3u8?api_password=mfp&d=https://vavoo.to/play/729945219/index.m3u8
+https://unhided.mac4.duckdns.org/proxy/hls/manifest.m3u8?api_password=mfp&d=https://vavoo.to/play/3897711086/index.m3u8
 
 #EXTINF:-1 tvg-id="skysportgolf.it" tvg-name="SKY SPORT GOLF" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/sky-sport-golf-it.png" group-title="Sport", SKY SPORT GOLF (2)
-https://unhided.mac4.duckdns.org/proxy/hls/manifest.m3u8?api_password=mfp&d=https://vavoo.to/play/3897711086/index.m3u8
+https://unhided.mac4.duckdns.org/proxy/hls/manifest.m3u8?api_password=mfp&d=https://vavoo.to/play/729945219/index.m3u8
 
 #EXTINF:-1 tvg-id="skysportmax.it" tvg-name="SKY SPORT MAX" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/sky-sport-max-it.png" group-title="Sport", SKY SPORT MAX
 https://unhided.mac4.duckdns.org/proxy/hls/manifest.m3u8?api_password=mfp&d=https://vavoo.to/play/2066326916/index.m3u8
@@ -238,10 +238,10 @@ https://unhided.mac4.duckdns.org/proxy/hls/manifest.m3u8?api_password=mfp&d=http
 https://unhided.mac4.duckdns.org/proxy/hls/manifest.m3u8?api_password=mfp&d=https://vavoo.to/play/78546677/index.m3u8
 
 #EXTINF:-1 tvg-id="skysportuno.it" tvg-name="SKY SPORT UNO" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/sky-sport-uno-it.png" group-title="Sport", SKY SPORT UNO
-https://unhided.mac4.duckdns.org/proxy/hls/manifest.m3u8?api_password=mfp&d=https://vavoo.to/play/210669162/index.m3u8
+https://unhided.mac4.duckdns.org/proxy/hls/manifest.m3u8?api_password=mfp&d=https://vavoo.to/play/3192996672/index.m3u8
 
 #EXTINF:-1 tvg-id="skysportuno.it" tvg-name="SKY SPORT UNO" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/sky-sport-uno-it.png" group-title="Sport", SKY SPORT UNO (2)
-https://unhided.mac4.duckdns.org/proxy/hls/manifest.m3u8?api_password=mfp&d=https://vavoo.to/play/3192996672/index.m3u8
+https://unhided.mac4.duckdns.org/proxy/hls/manifest.m3u8?api_password=mfp&d=https://vavoo.to/play/210669162/index.m3u8
 
 #EXTINF:-1 tvg-id="" tvg-name="SKY SPORTS F1" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/sky-sport-f1-it.png" group-title="Sport", SKY SPORTS F1
 https://unhided.mac4.duckdns.org/proxy/hls/manifest.m3u8?api_password=mfp&d=https://vavoo.to/play/2289038972/index.m3u8
@@ -265,10 +265,10 @@ https://unhided.mac4.duckdns.org/proxy/hls/manifest.m3u8?api_password=mfp&d=http
 https://unhided.mac4.duckdns.org/proxy/hls/manifest.m3u8?api_password=mfp&d=https://vavoo.to/play/2198410339/index.m3u8
 
 #EXTINF:-1 tvg-id="supertennis.it" tvg-name="SUPER TENNIS" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/super-tennis-it.png" group-title="Sport", SUPER TENNIS
-https://unhided.mac4.duckdns.org/proxy/hls/manifest.m3u8?api_password=mfp&d=https://vavoo.to/play/3213195143/index.m3u8
+https://unhided.mac4.duckdns.org/proxy/hls/manifest.m3u8?api_password=mfp&d=https://vavoo.to/play/3009377513/index.m3u8
 
 #EXTINF:-1 tvg-id="supertennis.it" tvg-name="SUPER TENNIS" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/super-tennis-it.png" group-title="Sport", SUPER TENNIS (2)
-https://unhided.mac4.duckdns.org/proxy/hls/manifest.m3u8?api_password=mfp&d=https://vavoo.to/play/3009377513/index.m3u8
+https://unhided.mac4.duckdns.org/proxy/hls/manifest.m3u8?api_password=mfp&d=https://vavoo.to/play/3213195143/index.m3u8
 
 #EXTINF:-1 tvg-id="" tvg-name="TENNIS CHANNEL" tvg-logo="https://images.tennis.com/image/upload/t_16-9_768/v1620828532/tenniscom-prd/assets/Fallback/Tennis_Fallback_v6_f5tjzv.jpg" group-title="Sport", TENNIS CHANNEL
 https://unhided.mac4.duckdns.org/proxy/hls/manifest.m3u8?api_password=mfp&d=https://vavoo.to/play/2716316208/index.m3u8
@@ -313,10 +313,10 @@ https://unhided.mac4.duckdns.org/proxy/hls/manifest.m3u8?api_password=mfp&d=http
 https://unhided.mac4.duckdns.org/proxy/hls/manifest.m3u8?api_password=mfp&d=https://vavoo.to/play/86091226/index.m3u8
 
 #EXTINF:-1 tvg-id="skyatlantic.it" tvg-name="SKY ATLANTIC" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/sky-atlantic-it.png" group-title="Film & Serie TV", SKY ATLANTIC
-https://unhided.mac4.duckdns.org/proxy/hls/manifest.m3u8?api_password=mfp&d=https://vavoo.to/play/1482866609/index.m3u8
+https://unhided.mac4.duckdns.org/proxy/hls/manifest.m3u8?api_password=mfp&d=https://vavoo.to/play/1421393119/index.m3u8
 
 #EXTINF:-1 tvg-id="skyatlantic.it" tvg-name="SKY ATLANTIC" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/sky-atlantic-it.png" group-title="Film & Serie TV", SKY ATLANTIC (2)
-https://unhided.mac4.duckdns.org/proxy/hls/manifest.m3u8?api_password=mfp&d=https://vavoo.to/play/1421393119/index.m3u8
+https://unhided.mac4.duckdns.org/proxy/hls/manifest.m3u8?api_password=mfp&d=https://vavoo.to/play/1482866609/index.m3u8
 
 #EXTINF:-1 tvg-id="skycinemaaction.it" tvg-name="SKY CINEMA ACTION" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/sky-cinema-action-it.png" group-title="Film & Serie TV", SKY CINEMA ACTION
 https://unhided.mac4.duckdns.org/proxy/hls/manifest.m3u8?api_password=mfp&d=https://vavoo.to/play/2242741766/index.m3u8
@@ -349,10 +349,10 @@ https://unhided.mac4.duckdns.org/proxy/hls/manifest.m3u8?api_password=mfp&d=http
 https://unhided.mac4.duckdns.org/proxy/hls/manifest.m3u8?api_password=mfp&d=https://vavoo.to/play/1078650168/index.m3u8
 
 #EXTINF:-1 tvg-id="skycinemafamily.it" tvg-name="SKY CINEMA FAMILY" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/sky-cinema-family-it.png" group-title="Film & Serie TV", SKY CINEMA FAMILY
-https://unhided.mac4.duckdns.org/proxy/hls/manifest.m3u8?api_password=mfp&d=https://vavoo.to/play/415795144/index.m3u8
+https://unhided.mac4.duckdns.org/proxy/hls/manifest.m3u8?api_password=mfp&d=https://vavoo.to/play/3216516117/index.m3u8
 
 #EXTINF:-1 tvg-id="skycinemafamily.it" tvg-name="SKY CINEMA FAMILY" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/sky-cinema-family-it.png" group-title="Film & Serie TV", SKY CINEMA FAMILY (2)
-https://unhided.mac4.duckdns.org/proxy/hls/manifest.m3u8?api_password=mfp&d=https://vavoo.to/play/3216516117/index.m3u8
+https://unhided.mac4.duckdns.org/proxy/hls/manifest.m3u8?api_password=mfp&d=https://vavoo.to/play/415795144/index.m3u8
 
 #EXTINF:-1 tvg-id="skycinemaromance.it" tvg-name="SKY CINEMA ROMANCE" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/sky-cinema-romance-it.png" group-title="Film & Serie TV", SKY CINEMA ROMANCE
 https://unhided.mac4.duckdns.org/proxy/hls/manifest.m3u8?api_password=mfp&d=https://vavoo.to/play/2890008905/index.m3u8
@@ -406,10 +406,10 @@ https://unhided.mac4.duckdns.org/proxy/hls/manifest.m3u8?api_password=mfp&d=http
 https://unhided.mac4.duckdns.org/proxy/hls/manifest.m3u8?api_password=mfp&d=https://vavoo.to/play/3470758028/index.m3u8
 
 #EXTINF:-1 tvg-id="" tvg-name="SKY PRIMAFILA 2" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/sky-primafila-it.png" group-title="Film & Serie TV", SKY PRIMAFILA 2
-https://unhided.mac4.duckdns.org/proxy/hls/manifest.m3u8?api_password=mfp&d=https://vavoo.to/play/525374356/index.m3u8
+https://unhided.mac4.duckdns.org/proxy/hls/manifest.m3u8?api_password=mfp&d=https://vavoo.to/play/877200714/index.m3u8
 
 #EXTINF:-1 tvg-id="" tvg-name="SKY PRIMAFILA 2" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/sky-primafila-it.png" group-title="Film & Serie TV", SKY PRIMAFILA 2 (2)
-https://unhided.mac4.duckdns.org/proxy/hls/manifest.m3u8?api_password=mfp&d=https://vavoo.to/play/877200714/index.m3u8
+https://unhided.mac4.duckdns.org/proxy/hls/manifest.m3u8?api_password=mfp&d=https://vavoo.to/play/525374356/index.m3u8
 
 #EXTINF:-1 tvg-id="" tvg-name="SKY PRIMAFILA 3" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/sky-primafila-it.png" group-title="Film & Serie TV", SKY PRIMAFILA 3
 https://unhided.mac4.duckdns.org/proxy/hls/manifest.m3u8?api_password=mfp&d=https://vavoo.to/play/573618724/index.m3u8
@@ -430,10 +430,10 @@ https://unhided.mac4.duckdns.org/proxy/hls/manifest.m3u8?api_password=mfp&d=http
 https://unhided.mac4.duckdns.org/proxy/hls/manifest.m3u8?api_password=mfp&d=https://vavoo.to/play/2255083866/index.m3u8
 
 #EXTINF:-1 tvg-id="" tvg-name="SKY PRIMAFILA 6" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/sky-primafila-it.png" group-title="Film & Serie TV", SKY PRIMAFILA 6
-https://unhided.mac4.duckdns.org/proxy/hls/manifest.m3u8?api_password=mfp&d=https://vavoo.to/play/3939513684/index.m3u8
+https://unhided.mac4.duckdns.org/proxy/hls/manifest.m3u8?api_password=mfp&d=https://vavoo.to/play/3251217290/index.m3u8
 
 #EXTINF:-1 tvg-id="" tvg-name="SKY PRIMAFILA 6" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/sky-primafila-it.png" group-title="Film & Serie TV", SKY PRIMAFILA 6 (2)
-https://unhided.mac4.duckdns.org/proxy/hls/manifest.m3u8?api_password=mfp&d=https://vavoo.to/play/3251217290/index.m3u8
+https://unhided.mac4.duckdns.org/proxy/hls/manifest.m3u8?api_password=mfp&d=https://vavoo.to/play/3939513684/index.m3u8
 
 #EXTINF:-1 tvg-id="" tvg-name="SKY PRIMAFILA 7" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/sky-primafila-it.png" group-title="Film & Serie TV", SKY PRIMAFILA 7
 https://unhided.mac4.duckdns.org/proxy/hls/manifest.m3u8?api_password=mfp&d=https://vavoo.to/play/3618643172/index.m3u8
@@ -502,19 +502,19 @@ https://unhided.mac4.duckdns.org/proxy/hls/manifest.m3u8?api_password=mfp&d=http
 https://unhided.mac4.duckdns.org/proxy/hls/manifest.m3u8?api_password=mfp&d=https://vavoo.to/play/3841982646/index.m3u8
 
 #EXTINF:-1 tvg-id="cartoonnetwork.it" tvg-name="CARTOON NETWORK" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/cartoon-network-it.png" group-title="Bambini", CARTOON NETWORK
-https://unhided.mac4.duckdns.org/proxy/hls/manifest.m3u8?api_password=mfp&d=https://vavoo.to/play/1744435623/index.m3u8
-
-#EXTINF:-1 tvg-id="cartoonnetwork.it" tvg-name="CARTOON NETWORK" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/cartoon-network-it.png" group-title="Bambini", CARTOON NETWORK (2)
 https://unhided.mac4.duckdns.org/proxy/hls/manifest.m3u8?api_password=mfp&d=https://vavoo.to/play/1289777017/index.m3u8
 
-#EXTINF:-1 tvg-id="cartoonito.it" tvg-name="CARTOONITO" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/cartoonito-it.png" group-title="Bambini", CARTOONITO
-https://unhided.mac4.duckdns.org/proxy/hls/manifest.m3u8?api_password=mfp&d=https://vavoo.to/play/1987220436/index.m3u8
+#EXTINF:-1 tvg-id="cartoonnetwork.it" tvg-name="CARTOON NETWORK" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/cartoon-network-it.png" group-title="Bambini", CARTOON NETWORK (2)
+https://unhided.mac4.duckdns.org/proxy/hls/manifest.m3u8?api_password=mfp&d=https://vavoo.to/play/1744435623/index.m3u8
 
-#EXTINF:-1 tvg-id="cartoonito.it" tvg-name="CARTOONITO" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/cartoonito-it.png" group-title="Bambini", CARTOONITO (2)
+#EXTINF:-1 tvg-id="cartoonito.it" tvg-name="CARTOONITO" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/cartoonito-it.png" group-title="Bambini", CARTOONITO
 https://unhided.mac4.duckdns.org/proxy/hls/manifest.m3u8?api_password=mfp&d=https://vavoo.to/play/2178717282/index.m3u8
 
-#EXTINF:-1 tvg-id="cartoonito.it" tvg-name="CARTOONITO" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/cartoonito-it.png" group-title="Bambini", CARTOONITO (3)
+#EXTINF:-1 tvg-id="cartoonito.it" tvg-name="CARTOONITO" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/cartoonito-it.png" group-title="Bambini", CARTOONITO (2)
 https://unhided.mac4.duckdns.org/proxy/hls/manifest.m3u8?api_password=mfp&d=https://vavoo.to/play/1907000512/index.m3u8
+
+#EXTINF:-1 tvg-id="cartoonito.it" tvg-name="CARTOONITO" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/cartoonito-it.png" group-title="Bambini", CARTOONITO (3)
+https://unhided.mac4.duckdns.org/proxy/hls/manifest.m3u8?api_password=mfp&d=https://vavoo.to/play/1987220436/index.m3u8
 
 #EXTINF:-1 tvg-id="" tvg-name="DISCOVERY K2" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/k2-it.png" group-title="Bambini", DISCOVERY K2
 https://unhided.mac4.duckdns.org/proxy/hls/manifest.m3u8?api_password=mfp&d=https://vavoo.to/play/3037871903/index.m3u8
@@ -535,10 +535,10 @@ https://unhided.mac4.duckdns.org/proxy/hls/manifest.m3u8?api_password=mfp&d=http
 https://unhided.mac4.duckdns.org/proxy/hls/manifest.m3u8?api_password=mfp&d=https://vavoo.to/play/3039389215/index.m3u8
 
 #EXTINF:-1 tvg-id="super!.it" tvg-name="SUPER!" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Super%21_logo_2021.svg/1024px-Super%21_logo_2021.svg.png" group-title="Bambini", SUPER!
-https://unhided.mac4.duckdns.org/proxy/hls/manifest.m3u8?api_password=mfp&d=https://vavoo.to/play/2900362153/index.m3u8
+https://unhided.mac4.duckdns.org/proxy/hls/manifest.m3u8?api_password=mfp&d=https://vavoo.to/play/3550030443/index.m3u8
 
 #EXTINF:-1 tvg-id="super!.it" tvg-name="SUPER!" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Super%21_logo_2021.svg/1024px-Super%21_logo_2021.svg.png" group-title="Bambini", SUPER! (2)
-https://unhided.mac4.duckdns.org/proxy/hls/manifest.m3u8?api_password=mfp&d=https://vavoo.to/play/3550030443/index.m3u8
+https://unhided.mac4.duckdns.org/proxy/hls/manifest.m3u8?api_password=mfp&d=https://vavoo.to/play/2900362153/index.m3u8
 
 #EXTINF:-1 tvg-id="" tvg-name="ARTE NETWORK" tvg-logo="https://www.arte.tv/sites/corporate/wp-content/themes/arte-entreprise/img/arte_logo.png" group-title="Documentari", ARTE NETWORK
 https://unhided.mac4.duckdns.org/proxy/hls/manifest.m3u8?api_password=mfp&d=https://vavoo.to/play/430570853/index.m3u8
@@ -556,10 +556,10 @@ https://unhided.mac4.duckdns.org/proxy/hls/manifest.m3u8?api_password=mfp&d=http
 https://unhided.mac4.duckdns.org/proxy/hls/manifest.m3u8?api_password=mfp&d=https://vavoo.to/play/2113273064/index.m3u8
 
 #EXTINF:-1 tvg-id="" tvg-name="DISCOVERY NOVE" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/nove-it.png" group-title="Documentari", DISCOVERY NOVE
-https://unhided.mac4.duckdns.org/proxy/hls/manifest.m3u8?api_password=mfp&d=https://vavoo.to/play/1574591400/index.m3u8
+https://unhided.mac4.duckdns.org/proxy/hls/manifest.m3u8?api_password=mfp&d=https://vavoo.to/play/2651461317/index.m3u8
 
 #EXTINF:-1 tvg-id="" tvg-name="DISCOVERY NOVE" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/nove-it.png" group-title="Documentari", DISCOVERY NOVE (2)
-https://unhided.mac4.duckdns.org/proxy/hls/manifest.m3u8?api_password=mfp&d=https://vavoo.to/play/2651461317/index.m3u8
+https://unhided.mac4.duckdns.org/proxy/hls/manifest.m3u8?api_password=mfp&d=https://vavoo.to/play/1574591400/index.m3u8
 
 #EXTINF:-1 tvg-id="historyhd.it" tvg-name="HISTORY" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/history-channel-it.png" group-title="Documentari", HISTORY
 https://unhided.mac4.duckdns.org/proxy/hls/manifest.m3u8?api_password=mfp&d=https://vavoo.to/play/2134724757/index.m3u8
@@ -580,10 +580,10 @@ https://unhided.mac4.duckdns.org/proxy/hls/manifest.m3u8?api_password=mfp&d=http
 https://unhided.mac4.duckdns.org/proxy/hls/manifest.m3u8?api_password=mfp&d=https://vavoo.to/play/3229664409/index.m3u8
 
 #EXTINF:-1 tvg-id="skyarte.it" tvg-name="SKY ARTE" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/sky-arte-it.png" group-title="Documentari", SKY ARTE
-https://unhided.mac4.duckdns.org/proxy/hls/manifest.m3u8?api_password=mfp&d=https://vavoo.to/play/1902695925/index.m3u8
+https://unhided.mac4.duckdns.org/proxy/hls/manifest.m3u8?api_password=mfp&d=https://vavoo.to/play/1806815496/index.m3u8
 
 #EXTINF:-1 tvg-id="skyarte.it" tvg-name="SKY ARTE" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/sky-arte-it.png" group-title="Documentari", SKY ARTE (2)
-https://unhided.mac4.duckdns.org/proxy/hls/manifest.m3u8?api_password=mfp&d=https://vavoo.to/play/1806815496/index.m3u8
+https://unhided.mac4.duckdns.org/proxy/hls/manifest.m3u8?api_password=mfp&d=https://vavoo.to/play/1902695925/index.m3u8
 
 #EXTINF:-1 tvg-id="skydocumentaries.it" tvg-name="SKY DOCUMENTARIES" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/sky-documentaries-it.png" group-title="Documentari", SKY DOCUMENTARIES
 https://unhided.mac4.duckdns.org/proxy/hls/manifest.m3u8?api_password=mfp&d=https://vavoo.to/play/464281981/index.m3u8
@@ -748,10 +748,10 @@ https://unhided.mac4.duckdns.org/proxy/hls/manifest.m3u8?api_password=mfp&d=http
 https://unhided.mac4.duckdns.org/proxy/hls/manifest.m3u8?api_password=mfp&d=https://vavoo.to/play/2381583828/index.m3u8
 
 #EXTINF:-1 tvg-id="cielo.it" tvg-name="CIELO" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/cielo-it.png" group-title="Altro", CIELO
-https://unhided.mac4.duckdns.org/proxy/hls/manifest.m3u8?api_password=mfp&d=https://vavoo.to/play/2719953688/index.m3u8
+https://unhided.mac4.duckdns.org/proxy/hls/manifest.m3u8?api_password=mfp&d=https://vavoo.to/play/3743894403/index.m3u8
 
 #EXTINF:-1 tvg-id="cielo.it" tvg-name="CIELO" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/cielo-it.png" group-title="Altro", CIELO (2)
-https://unhided.mac4.duckdns.org/proxy/hls/manifest.m3u8?api_password=mfp&d=https://vavoo.to/play/3743894403/index.m3u8
+https://unhided.mac4.duckdns.org/proxy/hls/manifest.m3u8?api_password=mfp&d=https://vavoo.to/play/2719953688/index.m3u8
 
 #EXTINF:-1 tvg-id="cine34.it" tvg-name="CINE 34" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/cine34-it.png" group-title="Altro", CINE 34
 https://unhided.mac4.duckdns.org/proxy/hls/manifest.m3u8?api_password=mfp&d=https://vavoo.to/play/62558606/index.m3u8
@@ -778,10 +778,10 @@ https://unhided.mac4.duckdns.org/proxy/hls/manifest.m3u8?api_password=mfp&d=http
 https://unhided.mac4.duckdns.org/proxy/hls/manifest.m3u8?api_password=mfp&d=https://vavoo.to/play/3156092639/index.m3u8
 
 #EXTINF:-1 tvg-id="dmax.it" tvg-name="DMAX" tvg-logo="https://cdn.cookielaw.org/logos/50417659-aa29-4f7f-b59d-f6e887deed53/a32be519-de41-40f4-abed-d2934ba6751b/9a44af24-5ca6-4098-aa95-594755bd7b2d/dmax_logo.png" group-title="Altro", DMAX
-https://unhided.mac4.duckdns.org/proxy/hls/manifest.m3u8?api_password=mfp&d=https://vavoo.to/play/3803638765/index.m3u8
+https://unhided.mac4.duckdns.org/proxy/hls/manifest.m3u8?api_password=mfp&d=https://vavoo.to/play/3008151733/index.m3u8
 
 #EXTINF:-1 tvg-id="dmax.it" tvg-name="DMAX" tvg-logo="https://cdn.cookielaw.org/logos/50417659-aa29-4f7f-b59d-f6e887deed53/a32be519-de41-40f4-abed-d2934ba6751b/9a44af24-5ca6-4098-aa95-594755bd7b2d/dmax_logo.png" group-title="Altro", DMAX (2)
-https://unhided.mac4.duckdns.org/proxy/hls/manifest.m3u8?api_password=mfp&d=https://vavoo.to/play/3008151733/index.m3u8
+https://unhided.mac4.duckdns.org/proxy/hls/manifest.m3u8?api_password=mfp&d=https://vavoo.to/play/3803638765/index.m3u8
 
 #EXTINF:-1 tvg-id="" tvg-name="ELIVE TV BRESCIA" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/e/ec/%C3%88_live_Brescia_logo.png" group-title="Altro", ELIVE TV BRESCIA
 https://unhided.mac4.duckdns.org/proxy/hls/manifest.m3u8?api_password=mfp&d=https://vavoo.to/play/1521821490/index.m3u8
@@ -862,10 +862,10 @@ https://unhided.mac4.duckdns.org/proxy/hls/manifest.m3u8?api_password=mfp&d=http
 https://unhided.mac4.duckdns.org/proxy/hls/manifest.m3u8?api_password=mfp&d=https://vavoo.to/play/576490047/index.m3u8
 
 #EXTINF:-1 tvg-id="" tvg-name="ITALIA 3" tvg-logo="https://static.wikia.nocookie.net/dreamlogos/images/4/4e/Italia_3_2013.png/revision/latest?cb=20200119124403" group-title="Altro", ITALIA 3
-https://unhided.mac4.duckdns.org/proxy/hls/manifest.m3u8?api_password=mfp&d=https://vavoo.to/play/1200985239/index.m3u8
+https://unhided.mac4.duckdns.org/proxy/hls/manifest.m3u8?api_password=mfp&d=https://vavoo.to/play/1565298794/index.m3u8
 
 #EXTINF:-1 tvg-id="" tvg-name="ITALIA 3" tvg-logo="https://static.wikia.nocookie.net/dreamlogos/images/4/4e/Italia_3_2013.png/revision/latest?cb=20200119124403" group-title="Altro", ITALIA 3 (2)
-https://unhided.mac4.duckdns.org/proxy/hls/manifest.m3u8?api_password=mfp&d=https://vavoo.to/play/1565298794/index.m3u8
+https://unhided.mac4.duckdns.org/proxy/hls/manifest.m3u8?api_password=mfp&d=https://vavoo.to/play/1200985239/index.m3u8
 
 #EXTINF:-1 tvg-id="" tvg-name="ITALIAN FISHING TV" tvg-logo="https://www.upmagazinearezzo.it/atladv/wp-content/uploads/2017/07/atlantide-adv-logo-italian-fishing-tv.jpg" group-title="Altro", ITALIAN FISHING TV
 https://unhided.mac4.duckdns.org/proxy/hls/manifest.m3u8?api_password=mfp&d=https://vavoo.to/play/477083716/index.m3u8
@@ -1237,38 +1237,20 @@ https://unhided.mac4.duckdns.org/proxy/hls/manifest.m3u8?api_password=mfp&d=http
 #EXTINF:-1 tvg-name="Soccer" group-title="Eventi Live",--- Soccer ---
 https://example.m3u8
 
-#EXTINF:-1 tvg-id="105" tvg-name="Italy - Serie A : Cagliari vs Venezia (20:45)" group-title="Eventi Live",Italy - Serie A : Cagliari vs Venezia (20:45)
-https://unhided.mac4.duckdns.org/extractor/video?host=DLHD&d=https://thedaddy.to/embed/stream-105.php&redirect_stream=true&api_password=mfp
+#EXTINF:-1 tvg-id="23" tvg-name="Italy - Serie B : Salernitana vs Frosinone (20:30)" group-title="Eventi Live",Italy - Serie B : Salernitana vs Frosinone (20:30)
+https://unhided.mac4.duckdns.org/extractor/video?host=DLHD&d=https://thedaddy.to/embed/stream-23.php&redirect_stream=true&api_password=mfp
 
-#EXTINF:-1 tvg-id="107" tvg-name="Italy - Serie A : Fiorentina vs Bologna (20:45)" group-title="Eventi Live",Italy - Serie A : Fiorentina vs Bologna (20:45)
-https://unhided.mac4.duckdns.org/extractor/video?host=DLHD&d=https://thedaddy.to/embed/stream-107.php&redirect_stream=true&api_password=mfp
+#EXTINF:-1 tvg-id="870" tvg-name="England - Premier League : Brighton & Hove Albion vs Liverpool (21:00)" group-title="Eventi Live",England - Premier League : Brighton & Hove Albion vs Liverpool (21:00)
+https://unhided.mac4.duckdns.org/extractor/video?host=DLHD&d=https://thedaddy.to/embed/stream-870.php&redirect_stream=true&api_password=mfp
 
-#EXTINF:-1 tvg-id="108" tvg-name="Italy - Serie A : Hellas Verona vs Como (20:45)" group-title="Eventi Live",Italy - Serie A : Hellas Verona vs Como (20:45)
-https://unhided.mac4.duckdns.org/extractor/video?host=DLHD&d=https://thedaddy.to/embed/stream-108.php&redirect_stream=true&api_password=mfp
-
-#EXTINF:-1 tvg-id="109" tvg-name="Italy - Serie A : Internazionale vs Lazio (20:45)" group-title="Eventi Live",Italy - Serie A : Internazionale vs Lazio (20:45)
-https://unhided.mac4.duckdns.org/extractor/video?host=DLHD&d=https://thedaddy.to/embed/stream-109.php&redirect_stream=true&api_password=mfp
-
-#EXTINF:-1 tvg-id="110" tvg-name="Italy - Serie A : Juventus vs Udinese (20:45)" group-title="Eventi Live",Italy - Serie A : Juventus vs Udinese (20:45)
-https://unhided.mac4.duckdns.org/extractor/video?host=DLHD&d=https://thedaddy.to/embed/stream-110.php&redirect_stream=true&api_password=mfp
-
-#EXTINF:-1 tvg-id="152" tvg-name="Italy - Serie A : Lecce vs Torino (20:45)" group-title="Eventi Live",Italy - Serie A : Lecce vs Torino (20:45)
-https://unhided.mac4.duckdns.org/extractor/video?host=DLHD&d=https://thedaddy.to/embed/stream-152.php&redirect_stream=true&api_password=mfp
-
-#EXTINF:-1 tvg-id="153" tvg-name="Italy - Serie A : Monza vs Empoli (20:45)" group-title="Eventi Live",Italy - Serie A : Monza vs Empoli (20:45)
-https://unhided.mac4.duckdns.org/extractor/video?host=DLHD&d=https://thedaddy.to/embed/stream-153.php&redirect_stream=true&api_password=mfp
-
-#EXTINF:-1 tvg-id="877" tvg-name="Italy - Serie A : Parma vs Napoli (20:45)" group-title="Eventi Live",Italy - Serie A : Parma vs Napoli (20:45)
-https://unhided.mac4.duckdns.org/extractor/video?host=DLHD&d=https://thedaddy.to/embed/stream-877.php&redirect_stream=true&api_password=mfp
-
-#EXTINF:-1 tvg-id="154" tvg-name="Italy - Serie A : Roma vs Milan (20:45)" group-title="Eventi Live",Italy - Serie A : Roma vs Milan (20:45)
-https://unhided.mac4.duckdns.org/extractor/video?host=DLHD&d=https://thedaddy.to/embed/stream-154.php&redirect_stream=true&api_password=mfp
-
-#EXTINF:-1 tvg-name="Climbing" group-title="Eventi Live",--- Climbing ---
+#EXTINF:-1 tvg-name="Basketball" group-title="Eventi Live",--- Basketball ---
 https://example.m3u8
 
-#EXTINF:-1 tvg-id="878" tvg-name="World Cup | Women Curitiba | Bouldering | Final (22:00)" group-title="Eventi Live",World Cup | Women Curitiba | Bouldering | Final (22:00)
-https://unhided.mac4.duckdns.org/extractor/video?host=DLHD&d=https://thedaddy.to/embed/stream-878.php&redirect_stream=true&api_password=mfp
+#EXTINF:-1 tvg-id="879" tvg-name="Lega A : Trento vs Olimpia Milano (20:00)" group-title="Eventi Live",Lega A : Trento vs Olimpia Milano (20:00)
+https://unhided.mac4.duckdns.org/extractor/video?host=DLHD&d=https://thedaddy.to/embed/stream-879.php&redirect_stream=true&api_password=mfp
+
+#EXTINF:-1 tvg-id="877" tvg-name="Lega A : Trapani vs Reggiana (20:30)" group-title="Eventi Live",Lega A : Trapani vs Reggiana (20:30)
+https://unhided.mac4.duckdns.org/extractor/video?host=DLHD&d=https://thedaddy.to/embed/stream-877.php&redirect_stream=true&api_password=mfp
 
 
 #EXTINF:-1 tvg-chno="80" tvg-name="Pluto TV Christmas" tvg-logo="https://images.pluto.tv/channels/612e05b885183d0007958101/colorLogoPNG.png" tvg-id="612e05b885183d0007958101" group-title="Pluto TV Italia",Pluto TV Christmas

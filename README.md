@@ -35,10 +35,10 @@ Se il proxy fornito non dovesse funzionare o preferisci crearne uno tuo, puoi fa
 
 ### ✅ Crea il tuo proxy personalizzato
 
-- **Proxy base**:  
+- **Proxy base più stabile**:  
   [tvproxy (repo GitHub)](https://github.com/nzo66/tvproxy)
 
-- **Proxy alternativo più stabile**:  
+- **Proxy alternativo**:  
   [mediaflow-proxy](https://github.com/mhdzumair/mediaflow-proxy)
 
 - **Per HuggingFace**  

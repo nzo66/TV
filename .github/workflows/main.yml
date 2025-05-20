@@ -23,8 +23,10 @@ jobs:
           pip install requests beautifulsoup4 lxml playwright bs4 rapidfuzz fuzzywuzzy python-Levenshtein python-dateutil python-dotenv selenium webdriver-manager
           playwright install 
       
-      - name: Run extraction script
-        run: python lista.py
+      - name: Run Script
+        run: |
+          export $(grep -v '^#' .env | xargs)
+          python "${LISTA}.py"
       
       - name: Configura Git
         run: |

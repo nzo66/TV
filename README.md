@@ -57,27 +57,9 @@ Per includere **canali esteri**, utilizza il branch `world`.
 
 ---
 
-
 > Se utilizzi **mediaflow-proxy**
 
-
 > Ricorda di aggiornare anche il file `.github/workflows/main.yml` con `listaMFP.py` nella riga 27.
-
----
-
-#### 2️⃣ URL dell’EPG
-
-Cerca e sostituisci:
-
-```
-https://raw.githubusercontent.com/nzo66/TV/refs/heads/main/epg.xml
-```
-
-con il link del tuo fork, ad esempio:
-
-```
-https://raw.githubusercontent.com/tuonome/TV/refs/heads/main/epg.xml
-```
 
 ---
 

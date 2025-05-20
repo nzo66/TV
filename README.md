@@ -52,31 +52,16 @@ Se il proxy fornito non dovesse funzionare o preferisci crearne uno tuo, puoi fa
 
 Avvia creando un fork della repository proxy.
 
-### 2. Modifica `lista.py`  
+### 2. Modifica il file `.env` ed inserisci i tuoi dati.
 Per includere **canali esteri**, utilizza il branch `world`.
 
 ---
 
-### ✏️ Modifiche necessarie
 
-#### 1️⃣ URL del Proxy
+> Se utilizzi **mediaflow-proxy**
 
-Nel file `lista.py`, sostituisci:
 
-```
-https://nzo66-tvproxy.hf.space
-```
-
-con il tuo URL personalizzato (es. `https://tuonome.hf.space`, Render o self-hosted).
-
-> Se utilizzi **mediaflow-proxy**, lavora invece sul file `listaMFP.py`  
-> Sostituisci:
-
-```
-https://nzo66-mfpproxy.hf.space
-```
-
-> E ricorda di aggiornare anche il file `.github/workflows/main.yml` con `listaMFP.py` nella riga 27.
+> Ricorda di aggiornare anche il file `.github/workflows/main.yml` con `listaMFP.py` nella riga 27.
 
 ---
 

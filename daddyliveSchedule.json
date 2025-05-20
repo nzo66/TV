@@ -1,5 +1,27 @@
 {
     "Tuesday 20th May 2025 - Schedule Time UK GMT": {
+        "PPV Events</span>": [
+            {
+                "time": "22:00",
+                "event": "Kubota High Limit Racing Grandview",
+                "channels": [
+                    {
+                        "channel_name": "FloRacing",
+                        "channel_id": "55"
+                    }
+                ]
+            },
+            {
+                "time": "22:00",
+                "event": "2025 Better Half Dash at Trackhouse Motorplex",
+                "channels": [
+                    {
+                        "channel_name": "FloRacing",
+                        "channel_id": "59"
+                    }
+                ]
+            }
+        ],
         "TV Shows</span>": [
             {
                 "time": "12:00",
@@ -788,6 +810,16 @@
                 ]
             },
             {
+                "time": "18:45",
+                "event": "French - Ligue 2 - Baraj : Boulogne vs Clermont",
+                "channels": []
+            },
+            {
+                "time": "18:45",
+                "event": "England - National League - Playoff : York City vs Oldham Athletic",
+                "channels": []
+            },
+            {
                 "time": "19:00",
                 "event": "England - Premier League : Simulcast",
                 "channels": [
@@ -1042,6 +1074,11 @@
                 ]
             },
             {
+                "time": "19:30",
+                "event": "Paraguay - Primera Division - Apertura : Sportivo Luqueno vs Deportivo Recoleta",
+                "channels": []
+            },
+            {
                 "time": "22:00",
                 "event": "Copa do Brasil : Vasco da Gama vs Oper\u00e1rio PR",
                 "channels": [
@@ -1054,6 +1091,16 @@
                         "channel_id": "88"
                     }
                 ]
+            },
+            {
+                "time": "22:00",
+                "event": "Bolivia - Copa Division Profesional : Nacional Potosi vs Jorge Wilstermann",
+                "channels": []
+            },
+            {
+                "time": "22:00",
+                "event": "Paraguay - Primera Division - Apertura : Sportivo Trinidense vs Nacional Asuncion",
+                "channels": []
             },
             {
                 "time": "23:00",
@@ -1127,6 +1174,11 @@
                         "channel_id": "758"
                     }
                 ]
+            },
+            {
+                "time": "00:30",
+                "event": "Bolivia - Copa Division Profesional : Independiente Petrolero vs Guabira",
+                "channels": []
             },
             {
                 "time": "02:30",
@@ -1916,6 +1968,101 @@
             {
                 "time": "17:10",
                 "event": "ATP - Geneva (ELV) : Sebastian Ofner vs Nuno Borges",
+                "channels": []
+            },
+            {
+                "time": "17:24",
+                "event": "ITF (M) - Cervia (ITA) - Double : F.Romano/M.Vavassori vs G.Oradini/A.Weis",
+                "channels": []
+            },
+            {
+                "time": "17:30",
+                "event": "ITF (F) - Pelham (USA) : Dj Bennett vs Haley Giavara",
+                "channels": []
+            },
+            {
+                "time": "17:30",
+                "event": "ITF (F) - Pelham (USA) : Petra Hule vs Merna Refaat",
+                "channels": []
+            },
+            {
+                "time": "18:00",
+                "event": "ITF (M) - Coquimbo (CHL) - Double : P.B.Dias/G.Villanueva vs J.Estevez/L.Guercio",
+                "channels": []
+            },
+            {
+                "time": "18:10",
+                "event": "UTR (M) - Boca Raton (USA) : Francisco Faria vs Zhengqing Ji",
+                "channels": []
+            },
+            {
+                "time": "18:10",
+                "event": "UTR (M) - Boca Raton (USA) : John Bernard vs Andrew Kotzen",
+                "channels": []
+            },
+            {
+                "time": "19:00",
+                "event": "UTR (F) - Urbana (USA) : Ariel Madatali vs Donatella Guarnieri",
+                "channels": []
+            },
+            {
+                "time": "19:00",
+                "event": "UTR (F) - Urbana (USA) : Megan Heuser Megan Heuser vs Jessica Kovalcik",
+                "channels": []
+            },
+            {
+                "time": "19:00",
+                "event": "UTR (M) - Urbana (USA) : Oliver Okonkwo vs Davis Taylor",
+                "channels": []
+            },
+            {
+                "time": "19:00",
+                "event": "UTR (M) - Urbana (USA) : Tighe Brunetti vs Shu Matsuoka",
+                "channels": []
+            },
+            {
+                "time": "20:10",
+                "event": "UTR (M) - Urbana (USA) : Matthew Fullerton vs Asahi Harazaki",
+                "channels": []
+            },
+            {
+                "time": "20:10",
+                "event": "UTR (M) - Urbana (USA) : Maximillian Mroz Maximillian Mroz vs Thomas Nicholas Gadecki",
+                "channels": []
+            },
+            {
+                "time": "01:00",
+                "event": "UTR (M) - Urayasu (JAP) : Jaden Dewandaka Tan vs Ryota Tanuma",
+                "channels": []
+            },
+            {
+                "time": "01:00",
+                "event": "UTR (M) - Urayasu (JAP) : Taiyo Kurata vs Wakamatsu Taichi",
+                "channels": []
+            },
+            {
+                "time": "02:10",
+                "event": "UTR (M) - Urayasu (JAP) : Derek Pham vs Ko Nagashima",
+                "channels": []
+            },
+            {
+                "time": "02:10",
+                "event": "UTR (M) - Urayasu (JAP) : Kosuke Nakanishi vs Emiliano Jorquera",
+                "channels": []
+            },
+            {
+                "time": "02:10",
+                "event": "UTR (M) - Urayasu (JAP) : Satoru Nakajima vs Haru Kawanak",
+                "channels": []
+            },
+            {
+                "time": "03:20",
+                "event": "UTR (M) - Urayasu (JAP) : Mattias Southcombe vs Christopher Kosei Ono",
+                "channels": []
+            },
+            {
+                "time": "03:20",
+                "event": "UTR (M) - Urayasu (JAP) : Takeyasu Sekiguchi vs Ryotero Matsumura",
                 "channels": []
             }
         ],

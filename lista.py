@@ -15,6 +15,13 @@ def merger_playlist():
     # Il codice che avevi nello script "merger_playlist.py" va qui, senza modifiche.
     import requests
     import os
+    from dotenv import load_dotenv
+
+    # Carica le variabili d'ambiente dal file .env
+    load_dotenv()
+
+    NOMEREPO = os.getenv("NOMEREPO")
+    NOMEGITHUB = os.getenv("NOMEGITHUB")
     
     # Percorsi o URL delle playlist M3U8
     url1 = "channels_italy.m3u8"  # File locale
@@ -53,7 +60,7 @@ def merger_playlist():
     lista = playlist1 + "\n" + playlist2 + "\n" + playlist3 + "\n" + playlist4
     
     # Aggiungi intestazione EPG
-    lista = '#EXTM3U x-tvg-url="https://raw.githubusercontent.com/nzo66/TV/refs/heads/main/epg.xml"\n' + lista
+    lista = f'#EXTM3U x-tvg-url="https://raw.githubusercontent.com/{NOMEGITHUB}/{NOMEREPO}/refs/heads/main/epg.xml"\n' + lista
     
     # Salva la playlist
     output_filename = os.path.join(script_directory, "lista.m3u")
@@ -179,8 +186,13 @@ def eventi_m3u8_generator():
     from datetime import datetime, timedelta 
     from dateutil import parser 
     import urllib.parse
-     
-    PROXY = "https://nzo66-tvproxy.hf.space"  # Proxy HLS 
+    import os
+    from dotenv import load_dotenv
+
+    # Carica le variabili d'ambiente dal file .env
+    load_dotenv()
+
+    PROXY = os.getenv("PROXYIP")  # Proxy HLS 
     JSON_FILE = "daddyliveSchedule.json" 
     OUTPUT_FILE = "eventi.m3u8" 
     BASE_URL = "https://thedaddy.to/embed/" 
@@ -688,8 +700,12 @@ def vavoo_italy_channels():
     import re
     import os
     import xml.etree.ElementTree as ET
+    from dotenv import load_dotenv
     
-    PROXY = "https://nzo66-tvproxy.hf.space"
+    # Carica le variabili d'ambiente dal file .env
+    load_dotenv()
+
+    PROXY = os.getenv("PROXYIP")
     EPG_FILE = "epg.xml"
     LOGOS_FILE = "logos.txt"
     OUTPUT_FILE = "channels_italy.m3u8"
@@ -832,8 +848,12 @@ def world_channels_generator():
     import re
     import os
     from collections import defaultdict
+    from dotenv import load_dotenv
     
-    PROXY = "https://nzo66-tvproxy.hf.space"
+    # Carica le variabili d'ambiente dal file .env
+    load_dotenv()
+
+    PROXY = os.getenv("PROXYIP")
     OUTPUT_FILE = "world.m3u8"
     BASE_URLS = [
         "https://vavoo.to"

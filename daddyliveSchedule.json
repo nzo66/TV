@@ -779,7 +779,12 @@
             {
                 "time": "18:00",
                 "event": "Campeonato Brasileiro De Futebol Sub-20 : Cruzeiro vs Corinthians",
-                "channels": []
+                "channels": [
+                    {
+                        "channel_name": "Sportv Brazil",
+                        "channel_id": "78"
+                    }
+                ]
             },
             {
                 "time": "18:30",

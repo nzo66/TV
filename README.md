@@ -57,12 +57,6 @@ Per includere **canali esteri**, utilizza il branch `world`.
 
 ---
 
-> Se utilizzi **mediaflow-proxy**
-
-> Ricorda di aggiornare anche il file `.github/workflows/main.yml` con `listaMFP.py` nella riga 27.
-
----
-
 ## 🚀 Esecuzione automatica con GitHub Actions
 
 Dopo le modifiche:

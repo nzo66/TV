@@ -1,16 +1,16 @@
 #EXTM3U x-tvg-url="https://raw.githubusercontent.com/nzo66/TV/refs/heads/main/epg.xml"
 
 #EXTINF:-1 tvg-id="rai1.it" tvg-name="RAI 1" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/rai-1-it.png" group-title="Rai", RAI 1
-https://tvproxy.mac4.duckdns.org/proxy/m3u?url=https://vavoo.to/play/875922788/index.m3u8
-
-#EXTINF:-1 tvg-id="rai1.it" tvg-name="RAI 1" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/rai-1-it.png" group-title="Rai", RAI 1 (2)
 https://tvproxy.mac4.duckdns.org/proxy/m3u?url=https://vavoo.to/play/1225653759/index.m3u8
 
+#EXTINF:-1 tvg-id="rai1.it" tvg-name="RAI 1" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/rai-1-it.png" group-title="Rai", RAI 1 (2)
+https://tvproxy.mac4.duckdns.org/proxy/m3u?url=https://vavoo.to/play/875922788/index.m3u8
+
 #EXTINF:-1 tvg-id="rai2.it" tvg-name="RAI 2" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/rai-2-it.png" group-title="Rai", RAI 2
-https://tvproxy.mac4.duckdns.org/proxy/m3u?url=https://vavoo.to/play/1939210164/index.m3u8
+https://tvproxy.mac4.duckdns.org/proxy/m3u?url=https://vavoo.to/play/246253359/index.m3u8
 
 #EXTINF:-1 tvg-id="rai2.it" tvg-name="RAI 2" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/rai-2-it.png" group-title="Rai", RAI 2 (2)
-https://tvproxy.mac4.duckdns.org/proxy/m3u?url=https://vavoo.to/play/246253359/index.m3u8
+https://tvproxy.mac4.duckdns.org/proxy/m3u?url=https://vavoo.to/play/1939210164/index.m3u8
 
 #EXTINF:-1 tvg-id="rai3.it" tvg-name="RAI 3" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/rai-3-it.png" group-title="Rai", RAI 3
 https://tvproxy.mac4.duckdns.org/proxy/m3u?url=https://vavoo.to/play/1324733956/index.m3u8
@@ -46,16 +46,16 @@ https://tvproxy.mac4.duckdns.org/proxy/m3u?url=https://vavoo.to/play/374675593/i
 https://tvproxy.mac4.duckdns.org/proxy/m3u?url=https://vavoo.to/play/294457245/index.m3u8
 
 #EXTINF:-1 tvg-id="raimovie.it" tvg-name="RAI MOVIE" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/rai-movie-it.png" group-title="Rai", RAI MOVIE
-https://tvproxy.mac4.duckdns.org/proxy/m3u?url=https://vavoo.to/play/1925964148/index.m3u8
-
-#EXTINF:-1 tvg-id="raimovie.it" tvg-name="RAI MOVIE" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/rai-movie-it.png" group-title="Rai", RAI MOVIE (2)
 https://tvproxy.mac4.duckdns.org/proxy/m3u?url=https://vavoo.to/play/2835672487/index.m3u8
 
+#EXTINF:-1 tvg-id="raimovie.it" tvg-name="RAI MOVIE" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/rai-movie-it.png" group-title="Rai", RAI MOVIE (2)
+https://tvproxy.mac4.duckdns.org/proxy/m3u?url=https://vavoo.to/play/1925964148/index.m3u8
+
 #EXTINF:-1 tvg-id="rainews24.it" tvg-name="RAI NEWS 24" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/rai-news-24-it.png" group-title="Rai", RAI NEWS 24
-https://tvproxy.mac4.duckdns.org/proxy/m3u?url=https://vavoo.to/play/2272923972/index.m3u8
+https://tvproxy.mac4.duckdns.org/proxy/m3u?url=https://vavoo.to/play/2239645272/index.m3u8
 
 #EXTINF:-1 tvg-id="rainews24.it" tvg-name="RAI NEWS 24" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/rai-news-24-it.png" group-title="Rai", RAI NEWS 24 (2)
-https://tvproxy.mac4.duckdns.org/proxy/m3u?url=https://vavoo.to/play/2239645272/index.m3u8
+https://tvproxy.mac4.duckdns.org/proxy/m3u?url=https://vavoo.to/play/2272923972/index.m3u8
 
 #EXTINF:-1 tvg-id="raipremium.it" tvg-name="RAI PREMIUM" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/rai-premium-it.png" group-title="Rai", RAI PREMIUM
 https://tvproxy.mac4.duckdns.org/proxy/m3u?url=https://vavoo.to/play/2828455552/index.m3u8
@@ -64,10 +64,10 @@ https://tvproxy.mac4.duckdns.org/proxy/m3u?url=https://vavoo.to/play/2828455552/
 https://tvproxy.mac4.duckdns.org/proxy/m3u?url=https://vavoo.to/play/2861734300/index.m3u8
 
 #EXTINF:-1 tvg-id="raiscuola.it" tvg-name="RAI SCUOLA" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/rai-scuola-it.png" group-title="Rai", RAI SCUOLA
-https://tvproxy.mac4.duckdns.org/proxy/m3u?url=https://vavoo.to/play/1886684667/index.m3u8
+https://tvproxy.mac4.duckdns.org/proxy/m3u?url=https://vavoo.to/play/2007798511/index.m3u8
 
 #EXTINF:-1 tvg-id="raiscuola.it" tvg-name="RAI SCUOLA" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/rai-scuola-it.png" group-title="Rai", RAI SCUOLA (2)
-https://tvproxy.mac4.duckdns.org/proxy/m3u?url=https://vavoo.to/play/2007798511/index.m3u8
+https://tvproxy.mac4.duckdns.org/proxy/m3u?url=https://vavoo.to/play/1886684667/index.m3u8
 
 #EXTINF:-1 tvg-id="raisport.it" tvg-name="RAI SPORT" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/italy/rai-sport-it.png" group-title="Rai", RAI SPORT
 https://tvproxy.mac4.duckdns.org/proxy/m3u?url=https://vavoo.to/play/2924135092/index.m3u8
@@ -145,10 +145,10 @@ https://tvproxy.mac4.duckdns.org/proxy/m3u?url=https://vavoo.to/play/3538009430/
 https://tvproxy.mac4.duckdns.org/proxy/m3u?url=https://vavoo.to/play/1351631603/index.m3u8
 
 #EXTINF:-1 tvg-id="dazn2.it" tvg-name="DAZN2" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/d/d6/Dazn-logo.png" group-title="Sport", DAZN2
-https://tvproxy.mac4.duckdns.org/proxy/m3u?url=https://vavoo.to/play/2911178456/index.m3u8
+https://tvproxy.mac4.duckdns.org/proxy/m3u?url=https://vavoo.to/play/1376440573/index.m3u8
 
 #EXTINF:-1 tvg-id="dazn2.it" tvg-name="DAZN2" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/d/d6/Dazn-logo.png" group-title="Sport", DAZN2 (2)
-https://tvproxy.mac4.duckdns.org/proxy/m3u?url=https://vavoo.to/play/1376440573/index.m3u8
+https://tvproxy.mac4.duckdns.org/proxy/m3u?url=https://vavoo.to/play/2911178456/index.m3u8
 
 #EXTINF:-1 tvg-id="eurosport1.it" tvg-name="EUROSPORT 1" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/spain/eurosport-1-es.png" group-title="Sport", EUROSPORT 1
 https://tvproxy.mac4.duckdns.org/proxy/m3u?url=https://vavoo.to/play/3448075317/index.m3u8
@@ -193,10 +193,10 @@ https://tvproxy.mac4.duckdns.org/proxy/m3u?url=https://vavoo.to/play/3007400791/
 https://tvproxy.mac4.duckdns.org/proxy/m3u?url=https://vavoo.to/play/2555960713/index.m3u8
 
 #EXTINF:-1 tvg-id="skysportcalcio.it" tvg-name="SKY SPORT CALCIO" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/sky-sport-calcio-it.png" group-title="Sport", SKY SPORT CALCIO
-https://tvproxy.mac4.duckdns.org/proxy/m3u?url=https://vavoo.to/play/449990998/index.m3u8
+https://tvproxy.mac4.duckdns.org/proxy/m3u?url=https://vavoo.to/play/1665920101/index.m3u8
 
 #EXTINF:-1 tvg-id="skysportcalcio.it" tvg-name="SKY SPORT CALCIO" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/sky-sport-calcio-it.png" group-title="Sport", SKY SPORT CALCIO (2)
-https://tvproxy.mac4.duckdns.org/proxy/m3u?url=https://vavoo.to/play/1665920101/index.m3u8
+https://tvproxy.mac4.duckdns.org/proxy/m3u?url=https://vavoo.to/play/449990998/index.m3u8
 
 #EXTINF:-1 tvg-id="skysportf1.it" tvg-name="SKY SPORT F1" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/sky-sport-f1-it.png" group-title="Sport", SKY SPORT F1
 https://tvproxy.mac4.duckdns.org/proxy/m3u?url=https://vavoo.to/play/4246774056/index.m3u8
@@ -232,16 +232,16 @@ https://tvproxy.mac4.duckdns.org/proxy/m3u?url=https://vavoo.to/play/326825326/i
 https://tvproxy.mac4.duckdns.org/proxy/m3u?url=https://vavoo.to/play/2077387085/index.m3u8
 
 #EXTINF:-1 tvg-id="skysporttennis.it" tvg-name="SKY SPORT TENNIS" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/sky-sport-tennis-it.png" group-title="Sport", SKY SPORT TENNIS
-https://tvproxy.mac4.duckdns.org/proxy/m3u?url=https://vavoo.to/play/2100771782/index.m3u8
-
-#EXTINF:-1 tvg-id="skysporttennis.it" tvg-name="SKY SPORT TENNIS" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/sky-sport-tennis-it.png" group-title="Sport", SKY SPORT TENNIS (2)
 https://tvproxy.mac4.duckdns.org/proxy/m3u?url=https://vavoo.to/play/78546677/index.m3u8
 
+#EXTINF:-1 tvg-id="skysporttennis.it" tvg-name="SKY SPORT TENNIS" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/sky-sport-tennis-it.png" group-title="Sport", SKY SPORT TENNIS (2)
+https://tvproxy.mac4.duckdns.org/proxy/m3u?url=https://vavoo.to/play/2100771782/index.m3u8
+
 #EXTINF:-1 tvg-id="skysportuno.it" tvg-name="SKY SPORT UNO" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/sky-sport-uno-it.png" group-title="Sport", SKY SPORT UNO
-https://tvproxy.mac4.duckdns.org/proxy/m3u?url=https://vavoo.to/play/210669162/index.m3u8
+https://tvproxy.mac4.duckdns.org/proxy/m3u?url=https://vavoo.to/play/3192996672/index.m3u8
 
 #EXTINF:-1 tvg-id="skysportuno.it" tvg-name="SKY SPORT UNO" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/sky-sport-uno-it.png" group-title="Sport", SKY SPORT UNO (2)
-https://tvproxy.mac4.duckdns.org/proxy/m3u?url=https://vavoo.to/play/3192996672/index.m3u8
+https://tvproxy.mac4.duckdns.org/proxy/m3u?url=https://vavoo.to/play/210669162/index.m3u8
 
 #EXTINF:-1 tvg-id="" tvg-name="SKY SPORTS F1" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/sky-sport-f1-it.png" group-title="Sport", SKY SPORTS F1
 https://tvproxy.mac4.duckdns.org/proxy/m3u?url=https://vavoo.to/play/2289038972/index.m3u8
@@ -319,10 +319,10 @@ https://tvproxy.mac4.duckdns.org/proxy/m3u?url=https://vavoo.to/play/1421393119/
 https://tvproxy.mac4.duckdns.org/proxy/m3u?url=https://vavoo.to/play/1482866609/index.m3u8
 
 #EXTINF:-1 tvg-id="skycinemaaction.it" tvg-name="SKY CINEMA ACTION" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/sky-cinema-action-it.png" group-title="Film & Serie TV", SKY CINEMA ACTION
-https://tvproxy.mac4.duckdns.org/proxy/m3u?url=https://vavoo.to/play/1144128726/index.m3u8
+https://tvproxy.mac4.duckdns.org/proxy/m3u?url=https://vavoo.to/play/3812796171/index.m3u8
 
 #EXTINF:-1 tvg-id="skycinemaaction.it" tvg-name="SKY CINEMA ACTION" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/sky-cinema-action-it.png" group-title="Film & Serie TV", SKY CINEMA ACTION (2)
-https://tvproxy.mac4.duckdns.org/proxy/m3u?url=https://vavoo.to/play/3812796171/index.m3u8
+https://tvproxy.mac4.duckdns.org/proxy/m3u?url=https://vavoo.to/play/1144128726/index.m3u8
 
 #EXTINF:-1 tvg-id="skycinemaaction.it" tvg-name="SKY CINEMA ACTION" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/sky-cinema-action-it.png" group-title="Film & Serie TV", SKY CINEMA ACTION (3)
 https://tvproxy.mac4.duckdns.org/proxy/m3u?url=https://vavoo.to/play/2242741766/index.m3u8
@@ -331,28 +331,28 @@ https://tvproxy.mac4.duckdns.org/proxy/m3u?url=https://vavoo.to/play/2242741766/
 https://tvproxy.mac4.duckdns.org/proxy/m3u?url=https://vavoo.to/play/3525837057/index.m3u8
 
 #EXTINF:-1 tvg-id="skycinemacomedy.it" tvg-name="SKY CINEMA COMEDY" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/sky-cinema-comedy-it.png" group-title="Film & Serie TV", SKY CINEMA COMEDY
-https://tvproxy.mac4.duckdns.org/proxy/m3u?url=https://vavoo.to/play/3131104474/index.m3u8
+https://tvproxy.mac4.duckdns.org/proxy/m3u?url=https://vavoo.to/play/500203271/index.m3u8
 
 #EXTINF:-1 tvg-id="skycinemacomedy.it" tvg-name="SKY CINEMA COMEDY" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/sky-cinema-comedy-it.png" group-title="Film & Serie TV", SKY CINEMA COMEDY (2)
-https://tvproxy.mac4.duckdns.org/proxy/m3u?url=https://vavoo.to/play/500203271/index.m3u8
+https://tvproxy.mac4.duckdns.org/proxy/m3u?url=https://vavoo.to/play/3131104474/index.m3u8
 
 #EXTINF:-1 tvg-id="skycinemadrama.it" tvg-name="SKY CINEMA DRAMA" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/sky-cinema-drama-it.png" group-title="Film & Serie TV", SKY CINEMA DRAMA
 https://tvproxy.mac4.duckdns.org/proxy/m3u?url=https://vavoo.to/play/1235530177/index.m3u8
 
 #EXTINF:-1 tvg-id="skycinemadue.it" tvg-name="SKY CINEMA DUE" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/sky-cinema-due-it.png" group-title="Film & Serie TV", SKY CINEMA DUE
-https://tvproxy.mac4.duckdns.org/proxy/m3u?url=https://vavoo.to/play/1228534500/index.m3u8
+https://tvproxy.mac4.duckdns.org/proxy/m3u?url=https://vavoo.to/play/2330574729/index.m3u8
 
 #EXTINF:-1 tvg-id="skycinemadue.it" tvg-name="SKY CINEMA DUE" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/sky-cinema-due-it.png" group-title="Film & Serie TV", SKY CINEMA DUE (2)
-https://tvproxy.mac4.duckdns.org/proxy/m3u?url=https://vavoo.to/play/2330574729/index.m3u8
+https://tvproxy.mac4.duckdns.org/proxy/m3u?url=https://vavoo.to/play/1228534500/index.m3u8
 
 #EXTINF:-1 tvg-id="skycinemadue+24.it" tvg-name="SKY CINEMA DUE +24" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/sky-cinema-due-plus24-it.png" group-title="Film & Serie TV", SKY CINEMA DUE +24
 https://tvproxy.mac4.duckdns.org/proxy/m3u?url=https://vavoo.to/play/1078650168/index.m3u8
 
 #EXTINF:-1 tvg-id="skycinemafamily.it" tvg-name="SKY CINEMA FAMILY" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/sky-cinema-family-it.png" group-title="Film & Serie TV", SKY CINEMA FAMILY
-https://tvproxy.mac4.duckdns.org/proxy/m3u?url=https://vavoo.to/play/415795144/index.m3u8
+https://tvproxy.mac4.duckdns.org/proxy/m3u?url=https://vavoo.to/play/3216516117/index.m3u8
 
 #EXTINF:-1 tvg-id="skycinemafamily.it" tvg-name="SKY CINEMA FAMILY" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/sky-cinema-family-it.png" group-title="Film & Serie TV", SKY CINEMA FAMILY (2)
-https://tvproxy.mac4.duckdns.org/proxy/m3u?url=https://vavoo.to/play/3216516117/index.m3u8
+https://tvproxy.mac4.duckdns.org/proxy/m3u?url=https://vavoo.to/play/415795144/index.m3u8
 
 #EXTINF:-1 tvg-id="skycinemaromance.it" tvg-name="SKY CINEMA ROMANCE" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/sky-cinema-romance-it.png" group-title="Film & Serie TV", SKY CINEMA ROMANCE
 https://tvproxy.mac4.duckdns.org/proxy/m3u?url=https://vavoo.to/play/2890008905/index.m3u8
@@ -376,16 +376,16 @@ https://tvproxy.mac4.duckdns.org/proxy/m3u?url=https://vavoo.to/play/1759625738/
 https://tvproxy.mac4.duckdns.org/proxy/m3u?url=https://vavoo.to/play/1699876530/index.m3u8
 
 #EXTINF:-1 tvg-id="" tvg-name="SKY PRIMAFILA 1" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/sky-primafila-it.png" group-title="Film & Serie TV", SKY PRIMAFILA 1
-https://tvproxy.mac4.duckdns.org/proxy/m3u?url=https://vavoo.to/play/1944682394/index.m3u8
-
-#EXTINF:-1 tvg-id="" tvg-name="SKY PRIMAFILA 1" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/sky-primafila-it.png" group-title="Film & Serie TV", SKY PRIMAFILA 1 (2)
 https://tvproxy.mac4.duckdns.org/proxy/m3u?url=https://vavoo.to/play/1492183364/index.m3u8
 
+#EXTINF:-1 tvg-id="" tvg-name="SKY PRIMAFILA 1" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/sky-primafila-it.png" group-title="Film & Serie TV", SKY PRIMAFILA 1 (2)
+https://tvproxy.mac4.duckdns.org/proxy/m3u?url=https://vavoo.to/play/1944682394/index.m3u8
+
 #EXTINF:-1 tvg-id="" tvg-name="SKY PRIMAFILA 10" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/sky-primafila-it.png" group-title="Film & Serie TV", SKY PRIMAFILA 10
-https://tvproxy.mac4.duckdns.org/proxy/m3u?url=https://vavoo.to/play/2268489342/index.m3u8
+https://tvproxy.mac4.duckdns.org/proxy/m3u?url=https://vavoo.to/play/4272937805/index.m3u8
 
 #EXTINF:-1 tvg-id="" tvg-name="SKY PRIMAFILA 10" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/sky-primafila-it.png" group-title="Film & Serie TV", SKY PRIMAFILA 10 (2)
-https://tvproxy.mac4.duckdns.org/proxy/m3u?url=https://vavoo.to/play/4272937805/index.m3u8
+https://tvproxy.mac4.duckdns.org/proxy/m3u?url=https://vavoo.to/play/2268489342/index.m3u8
 
 #EXTINF:-1 tvg-id="" tvg-name="SKY PRIMAFILA 12" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/sky-primafila-it.png" group-title="Film & Serie TV", SKY PRIMAFILA 12
 https://tvproxy.mac4.duckdns.org/proxy/m3u?url=https://vavoo.to/play/2221901869/index.m3u8
@@ -436,16 +436,16 @@ https://tvproxy.mac4.duckdns.org/proxy/m3u?url=https://vavoo.to/play/3939513684/
 https://tvproxy.mac4.duckdns.org/proxy/m3u?url=https://vavoo.to/play/3251217290/index.m3u8
 
 #EXTINF:-1 tvg-id="" tvg-name="SKY PRIMAFILA 7" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/sky-primafila-it.png" group-title="Film & Serie TV", SKY PRIMAFILA 7
-https://tvproxy.mac4.duckdns.org/proxy/m3u?url=https://vavoo.to/play/3618643172/index.m3u8
-
-#EXTINF:-1 tvg-id="" tvg-name="SKY PRIMAFILA 7" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/sky-primafila-it.png" group-title="Film & Serie TV", SKY PRIMAFILA 7 (2)
 https://tvproxy.mac4.duckdns.org/proxy/m3u?url=https://vavoo.to/play/4238969402/index.m3u8
 
+#EXTINF:-1 tvg-id="" tvg-name="SKY PRIMAFILA 7" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/sky-primafila-it.png" group-title="Film & Serie TV", SKY PRIMAFILA 7 (2)
+https://tvproxy.mac4.duckdns.org/proxy/m3u?url=https://vavoo.to/play/3618643172/index.m3u8
+
 #EXTINF:-1 tvg-id="" tvg-name="SKY PRIMAFILA 8" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/sky-primafila-it.png" group-title="Film & Serie TV", SKY PRIMAFILA 8
-https://tvproxy.mac4.duckdns.org/proxy/m3u?url=https://vavoo.to/play/2130255339/index.m3u8
+https://tvproxy.mac4.duckdns.org/proxy/m3u?url=https://vavoo.to/play/1440779061/index.m3u8
 
 #EXTINF:-1 tvg-id="" tvg-name="SKY PRIMAFILA 8" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/sky-primafila-it.png" group-title="Film & Serie TV", SKY PRIMAFILA 8 (2)
-https://tvproxy.mac4.duckdns.org/proxy/m3u?url=https://vavoo.to/play/1440779061/index.m3u8
+https://tvproxy.mac4.duckdns.org/proxy/m3u?url=https://vavoo.to/play/2130255339/index.m3u8
 
 #EXTINF:-1 tvg-id="" tvg-name="SKY PRIMAFILA 9" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/sky-primafila-it.png" group-title="Film & Serie TV", SKY PRIMAFILA 9
 https://tvproxy.mac4.duckdns.org/proxy/m3u?url=https://vavoo.to/play/1134113883/index.m3u8
@@ -457,10 +457,10 @@ https://tvproxy.mac4.duckdns.org/proxy/m3u?url=https://vavoo.to/play/1753260677/
 https://tvproxy.mac4.duckdns.org/proxy/m3u?url=https://vavoo.to/play/836680112/index.m3u8
 
 #EXTINF:-1 tvg-id="topcrime.it" tvg-name="TOP CRIME" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/top-crime-it.png" group-title="Film & Serie TV", TOP CRIME
-https://tvproxy.mac4.duckdns.org/proxy/m3u?url=https://vavoo.to/play/3420407456/index.m3u8
+https://tvproxy.mac4.duckdns.org/proxy/m3u?url=https://vavoo.to/play/269503091/index.m3u8
 
 #EXTINF:-1 tvg-id="topcrime.it" tvg-name="TOP CRIME" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/top-crime-it.png" group-title="Film & Serie TV", TOP CRIME (2)
-https://tvproxy.mac4.duckdns.org/proxy/m3u?url=https://vavoo.to/play/269503091/index.m3u8
+https://tvproxy.mac4.duckdns.org/proxy/m3u?url=https://vavoo.to/play/3420407456/index.m3u8
 
 #EXTINF:-1 tvg-id="euronews.it" tvg-name="EURONEWS" tvg-logo="https://play-lh.googleusercontent.com/Mi8GAQIp3x94VcvbxZNsK-CTNhHy1zmo51pmME5KkkK4WgN4aQhM1FlNgLZUMD4VAXhL" group-title="News", EURONEWS
 https://tvproxy.mac4.duckdns.org/proxy/m3u?url=https://vavoo.to/play/490955579/index.m3u8
@@ -535,10 +535,10 @@ https://tvproxy.mac4.duckdns.org/proxy/m3u?url=https://vavoo.to/play/380958472/i
 https://tvproxy.mac4.duckdns.org/proxy/m3u?url=https://vavoo.to/play/3039389215/index.m3u8
 
 #EXTINF:-1 tvg-id="super!.it" tvg-name="SUPER!" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Super%21_logo_2021.svg/1024px-Super%21_logo_2021.svg.png" group-title="Bambini", SUPER!
-https://tvproxy.mac4.duckdns.org/proxy/m3u?url=https://vavoo.to/play/3550030443/index.m3u8
+https://tvproxy.mac4.duckdns.org/proxy/m3u?url=https://vavoo.to/play/2900362153/index.m3u8
 
 #EXTINF:-1 tvg-id="super!.it" tvg-name="SUPER!" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Super%21_logo_2021.svg/1024px-Super%21_logo_2021.svg.png" group-title="Bambini", SUPER! (2)
-https://tvproxy.mac4.duckdns.org/proxy/m3u?url=https://vavoo.to/play/2900362153/index.m3u8
+https://tvproxy.mac4.duckdns.org/proxy/m3u?url=https://vavoo.to/play/3550030443/index.m3u8
 
 #EXTINF:-1 tvg-id="" tvg-name="ARTE NETWORK" tvg-logo="https://www.arte.tv/sites/corporate/wp-content/themes/arte-entreprise/img/arte_logo.png" group-title="Documentari", ARTE NETWORK
 https://tvproxy.mac4.duckdns.org/proxy/m3u?url=https://vavoo.to/play/430570853/index.m3u8
@@ -568,16 +568,16 @@ https://tvproxy.mac4.duckdns.org/proxy/m3u?url=https://vavoo.to/play/317837654/i
 https://tvproxy.mac4.duckdns.org/proxy/m3u?url=https://vavoo.to/play/2134724757/index.m3u8
 
 #EXTINF:-1 tvg-id="" tvg-name="NAT GEO" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/national-geographic-it.png" group-title="Documentari", NAT GEO
-https://tvproxy.mac4.duckdns.org/proxy/m3u?url=https://vavoo.to/play/179844839/index.m3u8
-
-#EXTINF:-1 tvg-id="" tvg-name="NAT GEO" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/national-geographic-it.png" group-title="Documentari", NAT GEO (2)
 https://tvproxy.mac4.duckdns.org/proxy/m3u?url=https://vavoo.to/play/1735702308/index.m3u8
 
+#EXTINF:-1 tvg-id="" tvg-name="NAT GEO" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/national-geographic-it.png" group-title="Documentari", NAT GEO (2)
+https://tvproxy.mac4.duckdns.org/proxy/m3u?url=https://vavoo.to/play/179844839/index.m3u8
+
 #EXTINF:-1 tvg-id="" tvg-name="NAT GEO WILD" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/national-geographic-wild-it.png" group-title="Documentari", NAT GEO WILD
-https://tvproxy.mac4.duckdns.org/proxy/m3u?url=https://vavoo.to/play/3428501495/index.m3u8
+https://tvproxy.mac4.duckdns.org/proxy/m3u?url=https://vavoo.to/play/3229664409/index.m3u8
 
 #EXTINF:-1 tvg-id="" tvg-name="NAT GEO WILD" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/national-geographic-wild-it.png" group-title="Documentari", NAT GEO WILD (2)
-https://tvproxy.mac4.duckdns.org/proxy/m3u?url=https://vavoo.to/play/3229664409/index.m3u8
+https://tvproxy.mac4.duckdns.org/proxy/m3u?url=https://vavoo.to/play/3428501495/index.m3u8
 
 #EXTINF:-1 tvg-id="skyarte.it" tvg-name="SKY ARTE" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/sky-arte-it.png" group-title="Documentari", SKY ARTE
 https://tvproxy.mac4.duckdns.org/proxy/m3u?url=https://vavoo.to/play/1806815496/index.m3u8
@@ -619,10 +619,10 @@ https://tvproxy.mac4.duckdns.org/proxy/m3u?url=https://vavoo.to/play/651388134/i
 https://tvproxy.mac4.duckdns.org/proxy/m3u?url=https://vavoo.to/play/32417864/index.m3u8
 
 #EXTINF:-1 tvg-id="" tvg-name="KISS KISS" tvg-logo="https://github.com/tv-logo/tv-logos/blob/main/countries/italy/radio-kiss-kiss-tv-it.png?raw=true" group-title="Musica", KISS KISS
-https://tvproxy.mac4.duckdns.org/proxy/m3u?url=https://vavoo.to/play/3815726749/index.m3u8
+https://tvproxy.mac4.duckdns.org/proxy/m3u?url=https://vavoo.to/play/950030926/index.m3u8
 
 #EXTINF:-1 tvg-id="" tvg-name="KISS KISS" tvg-logo="https://github.com/tv-logo/tv-logos/blob/main/countries/italy/radio-kiss-kiss-tv-it.png?raw=true" group-title="Musica", KISS KISS (2)
-https://tvproxy.mac4.duckdns.org/proxy/m3u?url=https://vavoo.to/play/950030926/index.m3u8
+https://tvproxy.mac4.duckdns.org/proxy/m3u?url=https://vavoo.to/play/3815726749/index.m3u8
 
 #EXTINF:-1 tvg-id="" tvg-name="KISS KISS ITALIA" tvg-logo="https://github.com/tv-logo/tv-logos/blob/main/countries/italy/radio-kiss-kiss-italia-it.png?raw=true" group-title="Musica", KISS KISS ITALIA
 https://tvproxy.mac4.duckdns.org/proxy/m3u?url=https://vavoo.to/play/1370869299/index.m3u8
@@ -736,10 +736,10 @@ https://tvproxy.mac4.duckdns.org/proxy/m3u?url=https://vavoo.to/play/565256431/i
 https://tvproxy.mac4.duckdns.org/proxy/m3u?url=https://vavoo.to/play/996680722/index.m3u8
 
 #EXTINF:-1 tvg-id="" tvg-name="CANALE 8" tvg-logo="https://upload.wikimedia.org/wikipedia/it/thumb/6/6d/TV8_Logo_2016.svg/1200px-TV8_Logo_2016.svg.png" group-title="Altro", CANALE 8
-https://tvproxy.mac4.duckdns.org/proxy/m3u?url=https://vavoo.to/play/3107500995/index.m3u8
+https://tvproxy.mac4.duckdns.org/proxy/m3u?url=https://vavoo.to/play/2749478718/index.m3u8
 
 #EXTINF:-1 tvg-id="" tvg-name="CANALE 8" tvg-logo="https://upload.wikimedia.org/wikipedia/it/thumb/6/6d/TV8_Logo_2016.svg/1200px-TV8_Logo_2016.svg.png" group-title="Altro", CANALE 8 (2)
-https://tvproxy.mac4.duckdns.org/proxy/m3u?url=https://vavoo.to/play/2749478718/index.m3u8
+https://tvproxy.mac4.duckdns.org/proxy/m3u?url=https://vavoo.to/play/3107500995/index.m3u8
 
 #EXTINF:-1 tvg-id="" tvg-name="CARINA TV" tvg-logo="https://radiocarina.it/wp-content/uploads/2024/01/RadioCarina-Vers.2.png" group-title="Altro", CARINA TV
 https://tvproxy.mac4.duckdns.org/proxy/m3u?url=https://vavoo.to/play/1527236924/index.m3u8
@@ -760,10 +760,10 @@ https://tvproxy.mac4.duckdns.org/proxy/m3u?url=https://vavoo.to/play/62558606/in
 https://tvproxy.mac4.duckdns.org/proxy/m3u?url=https://vavoo.to/play/64060922/index.m3u8
 
 #EXTINF:-1 tvg-id="comedycentral.it" tvg-name="COMEDY CENTRAL" tvg-logo="https://yt3.googleusercontent.com/FPzu1EWCI54fIh2j9JEp0NOzwoeugjL4sZTQCdoxoQY1U4QHyKx2L3wPSw27IueuZGchIxtKfv8=s900-c-k-c0x00ffffff-no-rj" group-title="Altro", COMEDY CENTRAL
-https://tvproxy.mac4.duckdns.org/proxy/m3u?url=https://vavoo.to/play/433893159/index.m3u8
+https://tvproxy.mac4.duckdns.org/proxy/m3u?url=https://vavoo.to/play/3658277450/index.m3u8
 
 #EXTINF:-1 tvg-id="comedycentral.it" tvg-name="COMEDY CENTRAL" tvg-logo="https://yt3.googleusercontent.com/FPzu1EWCI54fIh2j9JEp0NOzwoeugjL4sZTQCdoxoQY1U4QHyKx2L3wPSw27IueuZGchIxtKfv8=s900-c-k-c0x00ffffff-no-rj" group-title="Altro", COMEDY CENTRAL (2)
-https://tvproxy.mac4.duckdns.org/proxy/m3u?url=https://vavoo.to/play/3658277450/index.m3u8
+https://tvproxy.mac4.duckdns.org/proxy/m3u?url=https://vavoo.to/play/433893159/index.m3u8
 
 #EXTINF:-1 tvg-id="" tvg-name="COMPANY TV" tvg-logo="https://www.trendcomunicazione.com/wp-content/uploads/2018/11/20180416-logo-tv-bokka-300x155.png" group-title="Altro", COMPANY TV
 https://tvproxy.mac4.duckdns.org/proxy/m3u?url=https://vavoo.to/play/1322483308/index.m3u8
@@ -832,10 +832,10 @@ https://tvproxy.mac4.duckdns.org/proxy/m3u?url=https://vavoo.to/play/2820683351/
 https://tvproxy.mac4.duckdns.org/proxy/m3u?url=https://vavoo.to/play/2179686828/index.m3u8
 
 #EXTINF:-1 tvg-id="giallo.it" tvg-name="GIALLO" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/giallo-it.png" group-title="Altro", GIALLO
-https://tvproxy.mac4.duckdns.org/proxy/m3u?url=https://vavoo.to/play/2373936189/index.m3u8
+https://tvproxy.mac4.duckdns.org/proxy/m3u?url=https://vavoo.to/play/4060499455/index.m3u8
 
 #EXTINF:-1 tvg-id="giallo.it" tvg-name="GIALLO" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/giallo-it.png" group-title="Altro", GIALLO (2)
-https://tvproxy.mac4.duckdns.org/proxy/m3u?url=https://vavoo.to/play/4060499455/index.m3u8
+https://tvproxy.mac4.duckdns.org/proxy/m3u?url=https://vavoo.to/play/2373936189/index.m3u8
 
 #EXTINF:-1 tvg-id="" tvg-name="GLOBUS TELEVISION" tvg-logo="https://ennapress.it/wp-content/uploads/2020/10/globus.png" group-title="Altro", GLOBUS TELEVISION
 https://tvproxy.mac4.duckdns.org/proxy/m3u?url=https://vavoo.to/play/2116902817/index.m3u8
@@ -853,10 +853,10 @@ https://tvproxy.mac4.duckdns.org/proxy/m3u?url=https://vavoo.to/play/2897782781/
 https://tvproxy.mac4.duckdns.org/proxy/m3u?url=https://vavoo.to/play/4248997029/index.m3u8
 
 #EXTINF:-1 tvg-id="" tvg-name="ICARO TV" tvg-logo="https://www.gruppoicaro.it/wp-content/uploads/2020/05/icarotv.png" group-title="Altro", ICARO TV
-https://tvproxy.mac4.duckdns.org/proxy/m3u?url=https://vavoo.to/play/2488017405/index.m3u8
+https://tvproxy.mac4.duckdns.org/proxy/m3u?url=https://vavoo.to/play/2392139008/index.m3u8
 
 #EXTINF:-1 tvg-id="" tvg-name="ICARO TV" tvg-logo="https://www.gruppoicaro.it/wp-content/uploads/2020/05/icarotv.png" group-title="Altro", ICARO TV (2)
-https://tvproxy.mac4.duckdns.org/proxy/m3u?url=https://vavoo.to/play/2392139008/index.m3u8
+https://tvproxy.mac4.duckdns.org/proxy/m3u?url=https://vavoo.to/play/2488017405/index.m3u8
 
 #EXTINF:-1 tvg-id="iris.it" tvg-name="IRIS" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/iris-it.png" group-title="Altro", IRIS
 https://tvproxy.mac4.duckdns.org/proxy/m3u?url=https://vavoo.to/play/576490047/index.m3u8
@@ -877,10 +877,10 @@ https://tvproxy.mac4.duckdns.org/proxy/m3u?url=https://vavoo.to/play/803540254/i
 https://tvproxy.mac4.duckdns.org/proxy/m3u?url=https://vavoo.to/play/3832171692/index.m3u8
 
 #EXTINF:-1 tvg-id="la5.it" tvg-name="LA 5" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/la5-it.png" group-title="Altro", LA 5
-https://tvproxy.mac4.duckdns.org/proxy/m3u?url=https://vavoo.to/play/84139639/index.m3u8
+https://tvproxy.mac4.duckdns.org/proxy/m3u?url=https://vavoo.to/play/1425667375/index.m3u8
 
 #EXTINF:-1 tvg-id="la5.it" tvg-name="LA 5" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/la5-it.png" group-title="Altro", LA 5 (2)
-https://tvproxy.mac4.duckdns.org/proxy/m3u?url=https://vavoo.to/play/1425667375/index.m3u8
+https://tvproxy.mac4.duckdns.org/proxy/m3u?url=https://vavoo.to/play/84139639/index.m3u8
 
 #EXTINF:-1 tvg-id="la7.it" tvg-name="LA 7" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/la7-it.png" group-title="Altro", LA 7
 https://tvproxy.mac4.duckdns.org/proxy/m3u?url=https://vavoo.to/play/2143522071/index.m3u8
@@ -907,10 +907,10 @@ https://tvproxy.mac4.duckdns.org/proxy/m3u?url=https://vavoo.to/play/2835333400/
 https://tvproxy.mac4.duckdns.org/proxy/m3u?url=https://vavoo.to/play/3648324945/index.m3u8
 
 #EXTINF:-1 tvg-id="motortrend.it" tvg-name="MOTORTREND" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Motor_Trend_logo.svg/2560px-Motor_Trend_logo.svg.png" group-title="Altro", MOTORTREND
-https://tvproxy.mac4.duckdns.org/proxy/m3u?url=https://vavoo.to/play/3889279895/index.m3u8
+https://tvproxy.mac4.duckdns.org/proxy/m3u?url=https://vavoo.to/play/3758728323/index.m3u8
 
 #EXTINF:-1 tvg-id="motortrend.it" tvg-name="MOTORTREND" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Motor_Trend_logo.svg/2560px-Motor_Trend_logo.svg.png" group-title="Altro", MOTORTREND (2)
-https://tvproxy.mac4.duckdns.org/proxy/m3u?url=https://vavoo.to/play/3758728323/index.m3u8
+https://tvproxy.mac4.duckdns.org/proxy/m3u?url=https://vavoo.to/play/3889279895/index.m3u8
 
 #EXTINF:-1 tvg-id="" tvg-name="ONDA NOVARA TV" tvg-logo="https://gag-fondazionedeagostini.s3.amazonaws.com/wp-content/uploads/2023/03/logo-Onda-Novara-TV-Ufficiale-1.png" group-title="Altro", ONDA NOVARA TV
 https://tvproxy.mac4.duckdns.org/proxy/m3u?url=https://vavoo.to/play/3134124967/index.m3u8
@@ -973,10 +973,10 @@ https://tvproxy.mac4.duckdns.org/proxy/m3u?url=https://vavoo.to/play/2165549789/
 https://tvproxy.mac4.duckdns.org/proxy/m3u?url=https://vavoo.to/play/3075118500/index.m3u8
 
 #EXTINF:-1 tvg-id="rete4.it" tvg-name="RETE 4" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/rete4-it.png" group-title="Altro", RETE 4
-https://tvproxy.mac4.duckdns.org/proxy/m3u?url=https://vavoo.to/play/4198218214/index.m3u8
+https://tvproxy.mac4.duckdns.org/proxy/m3u?url=https://vavoo.to/play/2235732004/index.m3u8
 
 #EXTINF:-1 tvg-id="rete4.it" tvg-name="RETE 4" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/rete4-it.png" group-title="Altro", RETE 4 (2)
-https://tvproxy.mac4.duckdns.org/proxy/m3u?url=https://vavoo.to/play/2235732004/index.m3u8
+https://tvproxy.mac4.duckdns.org/proxy/m3u?url=https://vavoo.to/play/4198218214/index.m3u8
 
 #EXTINF:-1 tvg-id="" tvg-name="RETE ORO" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkE5wuUMIVAtANMfpSL4T5bIO73owXBhpvEg&s" group-title="Altro", RETE ORO
 https://tvproxy.mac4.duckdns.org/proxy/m3u?url=https://vavoo.to/play/3351863213/index.m3u8
@@ -1168,10 +1168,10 @@ https://tvproxy.mac4.duckdns.org/proxy/m3u?url=https://vavoo.to/play/1949044924/
 https://tvproxy.mac4.duckdns.org/proxy/m3u?url=https://vavoo.to/play/3506302655/index.m3u8
 
 #EXTINF:-1 tvg-id="tv8.it" tvg-name="TV 8" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/tv8-it.png" group-title="Altro", TV 8
-https://tvproxy.mac4.duckdns.org/proxy/m3u?url=https://vavoo.to/play/2706291008/index.m3u8
+https://tvproxy.mac4.duckdns.org/proxy/m3u?url=https://vavoo.to/play/4038365720/index.m3u8
 
 #EXTINF:-1 tvg-id="tv8.it" tvg-name="TV 8" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/tv8-it.png" group-title="Altro", TV 8 (2)
-https://tvproxy.mac4.duckdns.org/proxy/m3u?url=https://vavoo.to/play/4038365720/index.m3u8
+https://tvproxy.mac4.duckdns.org/proxy/m3u?url=https://vavoo.to/play/2706291008/index.m3u8
 
 #EXTINF:-1 tvg-id="" tvg-name="TV QUI" tvg-logo="https://www.tvdream.net/img/tvqui-modena-cover.jpg" group-title="Altro", TV QUI
 https://tvproxy.mac4.duckdns.org/proxy/m3u?url=https://vavoo.to/play/2202937518/index.m3u8
@@ -1237,17 +1237,26 @@ https://tvproxy.mac4.duckdns.org/proxy/m3u?url=https://vavoo.to/play/2989824407/
 #EXTINF:-1 tvg-name="Soccer" group-title="Eventi Live",--- Soccer ---
 https://exemple.m3u8
 
-#EXTINF:-1 tvg-id="23" tvg-name="Italy - Serie B : Salernitana vs Frosinone (20:30)" group-title="Eventi Live",Italy - Serie B : Salernitana vs Frosinone (20:30)
-https://tvproxy.mac4.duckdns.org/proxy/m3u?url=https://nfsnew.newkso.ru/nfs/premium23/mono.m3u8
-
-#EXTINF:-1 tvg-id="870" tvg-name="England - Premier League : Brighton & Hove Albion vs Liverpool (21:00)" group-title="Eventi Live",England - Premier League : Brighton & Hove Albion vs Liverpool (21:00)
+#EXTINF:-1 tvg-id="870" tvg-name="England - Premier League : Crystal Palace vs Wolverhampton Wanderers (21:00)" group-title="Eventi Live",England - Premier League : Crystal Palace vs Wolverhampton Wanderers (21:00)
 https://tvproxy.mac4.duckdns.org/proxy/m3u?url=https://windnew.newkso.ru/wind/premium870/mono.m3u8
+
+#EXTINF:-1 tvg-id="461" tvg-name="England - Premier League : Manchester City vs AFC Bournemouth (21:00)" group-title="Eventi Live",England - Premier League : Manchester City vs AFC Bournemouth (21:00)
+https://tvproxy.mac4.duckdns.org/proxy/m3u?url=https://ddy6new.newkso.ru/ddy6/premium461/mono.m3u8
 
 #EXTINF:-1 tvg-name="Basketball" group-title="Eventi Live",--- Basketball ---
 https://exemple.m3u8
 
-#EXTINF:-1 tvg-id="877" tvg-name="Lega A : Trapani vs Reggiana (20:30)" group-title="Eventi Live",Lega A : Trapani vs Reggiana (20:30)
-https://tvproxy.mac4.duckdns.org/proxy/m3u?url=https://nfsnew.newkso.ru/nfs/premium877/mono.m3u8
+#EXTINF:-1 tvg-id="882" tvg-name="Lega A : Virtus Bologna vs. Reyer Venezia (20:30)" group-title="Eventi Live",Lega A : Virtus Bologna vs. Reyer Venezia (20:30)
+https://tvproxy.mac4.duckdns.org/proxy/m3u?url=https://ddy6new.newkso.ru/ddy6/premium882/mono.m3u8
+
+#EXTINF:-1 tvg-id="879" tvg-name="Lega A : Virtus Bologna vs. Reyer Venezia (20:30)" group-title="Eventi Live",Lega A : Virtus Bologna vs. Reyer Venezia (20:30)
+https://tvproxy.mac4.duckdns.org/proxy/m3u?url=https://windnew.newkso.ru/wind/premium879/mono.m3u8
+
+#EXTINF:-1 tvg-name="Cycling" group-title="Eventi Live",--- Cycling ---
+https://exemple.m3u8
+
+#EXTINF:-1 tvg-id="878" tvg-name="Giro d'Italia | Stage 10 | Multi-Screen Men | Lucca – Pisa (ITT, 28.6km) (14:00)" group-title="Eventi Live",Giro d'Italia | Stage 10 | Multi-Screen Men | Lucca – Pisa (ITT, 28.6km) (14:00)
+https://tvproxy.mac4.duckdns.org/proxy/m3u?url=https://windnew.newkso.ru/wind/premium878/mono.m3u8
 
 
 #EXTINF:-1 tvg-chno="80" tvg-name="Pluto TV Christmas" tvg-logo="https://images.pluto.tv/channels/612e05b885183d0007958101/colorLogoPNG.png" tvg-id="612e05b885183d0007958101" group-title="Pluto TV Italia",Pluto TV Christmas

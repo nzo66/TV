@@ -223,12 +223,11 @@ def eventi_m3u8_generator():
             if teams_match:
                 team1, team2 = teams_match.groups()
                 search_queries = [
-                    f"{team1} {team2} logo partita",
-                    f"{clean_event_name} logo dazn"
+                    f"{team1} vs {team2} logo epg"
                 ]
             else:
                 search_queries = [
-                    f"{clean_event_name} logo dazn"
+                    f"{clean_event_name} logo epg"
                 ]
             
             # Configura le opzioni di Chrome

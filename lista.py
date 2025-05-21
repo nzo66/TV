@@ -207,119 +207,294 @@ def eventi_m3u8_generator():
     
     def search_logo_for_event(event_name): 
         """ 
-        Cerca un logo per l'evento specificato utilizzando Selenium per simulare esattamente un browser reale
+        Cerca un logo per l'evento specificato utilizzando un motore di ricerca 
         Restituisce l'URL dell'immagine trovata o None se non trovata 
         """ 
-        try:
-            # Importa le librerie necessarie per Selenium
-            from selenium import webdriver
-            from selenium.webdriver.chrome.options import Options
-            from selenium.webdriver.common.by import By
-            from selenium.webdriver.support.ui import WebDriverWait
-            from selenium.webdriver.support import expected_conditions as EC
-            import time
-            
+        try: 
+            # Rimuovi eventuali riferimenti all'orario dal nome dell'evento
+            # Cerca pattern come "Team A vs Team B (20:00)" e rimuovi la parte dell'orario
             clean_event_name = re.sub(r'\s*\(\d{1,2}:\d{2}\)\s*$', '', event_name)
             # Se c'è un ':', prendi solo la parte dopo
             if ':' in clean_event_name:
                 clean_event_name = clean_event_name.split(':', 1)[1].strip()
             
-            # Estrai i nomi delle squadre (se presenti)
-            teams_match = re.search(r'(.+?)\s+(?:vs\.?|contro|[-–—])\s+(.+)', clean_event_name, re.IGNORECASE)
+            # Verifica se l'evento contiene "vs" o "-" per identificare le due squadre
+            teams = None
+            if " vs " in clean_event_name:
+                teams = clean_event_name.split(" vs ")
+            elif " - " in clean_event_name:
+                teams = clean_event_name.split(" - ")
             
-            search_queries = []
-            if teams_match:
-                team1, team2 = teams_match.groups()
-                search_queries = [
-                    f"{team1} vs {team2} logo epg",
-                    f"{clean_event_name} logo epg" # Fallback con il nome completo dell'evento
-                ]
-            else:
-                search_queries = [
-                    f"{clean_event_name}  logo epg"                ]
-            
-            # Configura le opzioni di Chrome
-            chrome_options = Options()
-            chrome_options.add_argument("--headless")  # Esegui in modalità headless (senza interfaccia grafica)
-            chrome_options.add_argument("--disable-gpu")
-            chrome_options.add_argument("--no-sandbox")
-            chrome_options.add_argument("--disable-dev-shm-usage")
-            chrome_options.add_argument("--window-size=1920,1080")
-            # Aggiornato User-Agent a una versione più comune e stabile
-            chrome_options.add_argument("user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36")
-            
-            # Inizializza il driver di Chrome
-            driver = webdriver.Chrome(options=chrome_options)
-            
-            try:
-                # Prova diverse query di ricerca
-                for query in search_queries:
-                    # Codifica la query per l'URL
-                    search_query = urllib.parse.quote(query)
-                    
-                    # URL di ricerca Bing
-                    search_url = f"https://www.bing.com/images/search?q={search_query}"
-                    
-                    # Apri la pagina di ricerca
-                    driver.get(search_url)
-                    
-                    # Attendi che la pagina si carichi completamente
-                    time.sleep(3)
-                    
-                    # Trova tutte le immagini nella pagina
+            # Se abbiamo identificato due squadre, cerchiamo i loghi separatamente
+            if teams and len(teams) == 2:
+                team1 = teams[0].strip()
+                team2 = teams[1].strip()
+                
+                print(f"[🔍] Ricerca logo per Team 1: {team1}")
+                logo1_url = search_team_logo(team1)
+                
+                print(f"[🔍] Ricerca logo per Team 2: {team2}")
+                logo2_url = search_team_logo(team2)
+                
+                # Se abbiamo trovato entrambi i loghi, creiamo un'immagine combinata
+                if logo1_url and logo2_url:
+                    # Scarica i loghi e l'immagine VS
                     try:
-                        # Cerca i link delle immagini nei vari formati che Bing utilizza
-                        image_elements = driver.find_elements(By.CSS_SELECTOR, ".mimg")
+                        import io
+                        from PIL import Image
+                        import requests
+                        from os.path import exists, getmtime
+                        import os
+                        import time
                         
-                        if not image_elements:
-                            # Prova un selettore alternativo
-                            image_elements = driver.find_elements(By.CSS_SELECTOR, "a.iusc")
+                        # Crea la cartella logos se non esiste
+                        logos_dir = "logos"
+                        os.makedirs(logos_dir, exist_ok=True)
                         
-                        if image_elements:
-                            # Prendi la prima immagine
-                            first_image = image_elements[0]
-                            
-                            # Estrai l'URL dell'immagine
-                            if first_image.tag_name == "img":
-                                # Se è un tag img, prendi l'attributo src
-                                image_url = first_image.get_attribute("src")
-                            else:
-                                # Se è un link, cerca l'attributo m che contiene i dati dell'immagine
-                                m_attr = first_image.get_attribute("m")
-                                if m_attr:
-                                    # Converti la stringa in JSON
+                        # Controlla e rimuovi i loghi più vecchi di 3 ore
+                        current_time = time.time()
+                        three_hours_in_seconds = 3 * 60 * 60
+                        
+                        for logo_file in os.listdir(logos_dir):
+                            logo_path = os.path.join(logos_dir, logo_file)
+                            if os.path.isfile(logo_path):
+                                file_age = current_time - os.path.getmtime(logo_path)
+                                if file_age > three_hours_in_seconds:
                                     try:
-                                        m_data = json.loads(m_attr)
-                                        image_url = m_data.get("murl")
-                                    except:
-                                        # Se non riesci a estrarre l'URL dal JSON, clicca sull'immagine
-                                        first_image.click()
-                                        time.sleep(2)
-                                        
-                                        # Dopo il click, cerca il pannello laterale con l'immagine a dimensione piena
-                                        full_image = driver.find_element(By.CSS_SELECTOR, "#mainImageWindow img")
-                                        image_url = full_image.get_attribute("src")
-                                else:
-                                    # Se non c'è l'attributo m, cerca un'immagine all'interno
-                                    img_inside = first_image.find_element(By.TAG_NAME, "img")
-                                    image_url = img_inside.get_attribute("src")
-                            
-                            # Verifica che l'URL sia valido
-                            if image_url and image_url.startswith("http"):
-                                return image_url
-                    
+                                        os.remove(logo_path)
+                                        print(f"[🗑️] Rimosso logo obsoleto: {logo_file}")
+                                    except Exception as e:
+                                        print(f"[!] Errore nella rimozione del logo {logo_file}: {e}")
+                        
+                        # Verifica se l'immagine combinata esiste già e non è obsoleta
+                        output_filename = f"logos/{team1}_vs_{team2}.png"
+                        if exists(output_filename):
+                            file_age = current_time - os.path.getmtime(output_filename)
+                            if file_age <= three_hours_in_seconds:
+                                print(f"[✓] Utilizzo immagine combinata esistente: {output_filename}")
+                                return output_filename
+                        
+                        # Scarica i loghi
+                        response1 = requests.get(logo1_url, timeout=10)
+                        img1 = Image.open(io.BytesIO(response1.content))
+                        
+                        response2 = requests.get(logo2_url, timeout=10)
+                        img2 = Image.open(io.BytesIO(response2.content))
+                        
+                        # Carica l'immagine VS (assicurati che esista nella directory corrente)
+                        vs_path = "vs.png"
+                        if exists(vs_path):
+                            img_vs = Image.open(vs_path)
+                            # Converti l'immagine VS in modalità RGBA se non lo è già
+                            if img_vs.mode != 'RGBA':
+                                img_vs = img_vs.convert('RGBA')
+                        else:
+                            # Crea un'immagine di testo "VS" se il file non esiste
+                            img_vs = Image.new('RGBA', (100, 100), (255, 255, 255, 0))
+                            from PIL import ImageDraw, ImageFont
+                            draw = ImageDraw.Draw(img_vs)
+                            try:
+                                font = ImageFont.truetype("arial.ttf", 40)
+                            except:
+                                font = ImageFont.load_default()
+                            draw.text((30, 30), "VS", fill=(255, 0, 0), font=font)
+                        
+                        # Ridimensiona le immagini a dimensioni uniformi
+                        size = (150, 150)
+                        img1 = img1.resize(size)
+                        img2 = img2.resize(size)
+                        img_vs = img_vs.resize((100, 100))
+                        
+                        # Assicurati che tutte le immagini siano in modalità RGBA per supportare la trasparenza
+                        if img1.mode != 'RGBA':
+                            img1 = img1.convert('RGBA')
+                        if img2.mode != 'RGBA':
+                            img2 = img2.convert('RGBA')
+                        
+                        # Crea una nuova immagine con spazio per entrambi i loghi e il VS
+                        combined_width = 300
+                        combined = Image.new('RGBA', (combined_width, 150), (255, 255, 255, 0))
+                        
+                        # Posiziona le immagini con il VS sovrapposto al centro
+                        # Posiziona il primo logo a sinistra
+                        combined.paste(img1, (0, 0), img1)
+                        # Posiziona il secondo logo a destra
+                        combined.paste(img2, (combined_width - 150, 0), img2)
+                        
+                        # Posiziona il VS al centro, sovrapposto ai due loghi
+                        vs_x = (combined_width - 100) // 2
+                        
+                        # Crea una copia dell'immagine combinata prima di sovrapporre il VS
+                        # Questo passaggio è importante per preservare i dettagli dei loghi sottostanti
+                        combined_with_vs = combined.copy()
+                        combined_with_vs.paste(img_vs, (vs_x, 25), img_vs)
+                        
+                        # Usa l'immagine con VS sovrapposto
+                        combined = combined_with_vs
+                        
+                        # Salva l'immagine combinata
+                        os.makedirs(os.path.dirname(output_filename), exist_ok=True)
+                        combined.save(output_filename)
+                        
+                        print(f"[✓] Immagine combinata creata: {output_filename}")
+                        
+                        # Carica le variabili d'ambiente per GitHub
+                        NOMEREPO = os.getenv("NOMEREPO", "").strip()
+                        NOMEGITHUB = os.getenv("NOMEGITHUB", "").strip()
+                        
+                        # Se le variabili GitHub sono disponibili, restituisci l'URL raw di GitHub
+                        if NOMEGITHUB and NOMEREPO:
+                            github_raw_url = f"https://raw.githubusercontent.com/{NOMEGITHUB}/{NOMEREPO}/main/{output_filename}"
+                            print(f"[✓] URL GitHub generato: {github_raw_url}")
+                            return github_raw_url
+                        else:
+                            # Altrimenti restituisci il percorso locale
+                            return output_filename
+                        
                     except Exception as e:
-                        print(f"[!] Errore nell'estrazione dell'immagine per '{query}': {e}")
-                        continue
+                        print(f"[!] Errore nella creazione dell'immagine combinata: {e}")
+                        # Se fallisce, restituisci solo il primo logo trovato
+                        return logo1_url
+                
+                # Se non abbiamo trovato entrambi i loghi, restituisci quello che abbiamo
+                return logo1_url or logo2_url
             
-            finally:
-                # Chiudi il browser
-                driver.quit()
+            # Se non riusciamo a identificare le squadre, procedi con la ricerca normale
+            # Prepara la query di ricerca più specifica
+            search_query = urllib.parse.quote(f"{clean_event_name} logo epg")
             
-            print(f"[!] Nessun logo trovato per '{clean_event_name}' dopo aver provato tutte le query")
-                                
+            # Utilizziamo l'API di Bing Image Search con parametri migliorati
+            search_url = f"https://www.bing.com/images/search?q={search_query}&qft=+filterui:photo-transparent+filterui:aspect-square&form=IRFLTR"
+            
+            headers = { 
+                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36",
+                "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8",
+                "Accept-Language": "it-IT,it;q=0.9,en-US;q=0.8,en;q=0.7",
+                "Cache-Control": "max-age=0",
+                "Connection": "keep-alive"
+            } 
+            
+            response = requests.get(search_url, headers=headers, timeout=10)
+            
+            if response.status_code == 200: 
+                # Metodo 1: Cerca pattern per murl (URL dell'immagine media)
+                patterns = [
+                    r'murl&quot;:&quot;(https?://[^&]+)&quot;',
+                    r'"murl":"(https?://[^"]+)"',
+                    r'"contentUrl":"(https?://[^"]+\.(?:png|jpg|jpeg|svg))"',
+                    r'<img[^>]+src="(https?://[^"]+\.(?:png|jpg|jpeg|svg))[^>]+class="mimg"',
+                    r'<a[^>]+class="iusc"[^>]+m=\'{"[^"]*":"[^"]*","[^"]*":"(https?://[^"]+)"'
+                ]
+                
+                for pattern in patterns:
+                    matches = re.findall(pattern, response.text)
+                    if matches and len(matches) > 0:
+                        # Prendi il primo risultato che sembra un logo (preferibilmente PNG o SVG)
+                        for match in matches:
+                            if '.png' in match.lower() or '.svg' in match.lower():
+                                return match
+                        # Se non troviamo PNG o SVG, prendi il primo risultato
+                        return matches[0]
+                
+                # Metodo alternativo: cerca JSON incorporato nella pagina
+                json_match = re.search(r'var\s+IG\s*=\s*(\{.+?\});\s*', response.text)
+                if json_match:
+                    try:
+                        # Estrai e analizza il JSON
+                        json_str = json_match.group(1)
+                        # Pulisci il JSON se necessario
+                        json_str = re.sub(r'([{,])\s*([a-zA-Z0-9_]+):', r'\1"\2":', json_str)
+                        data = json.loads(json_str)
+                        
+                        # Cerca URL di immagini nel JSON
+                        if 'images' in data and len(data['images']) > 0:
+                            for img in data['images']:
+                                if 'murl' in img:
+                                    return img['murl']
+                    except Exception as e:
+                        print(f"[!] Errore nell'analisi JSON: {e}")
+                
+                print(f"[!] Nessun logo trovato per '{clean_event_name}' con i pattern standard")
+                
+                # Ultimo tentativo: cerca qualsiasi URL di immagine nella pagina
+                any_img = re.search(r'(https?://[^"\']+\.(?:png|jpg|jpeg|svg|webp))', response.text)
+                if any_img:
+                    return any_img.group(1)
+                    
         except Exception as e: 
             print(f"[!] Errore nella ricerca del logo per '{event_name}': {e}") 
+        
+        # Se non troviamo nulla, restituiamo None 
+        return None
+
+    def search_team_logo(team_name):
+        """
+        Funzione dedicata alla ricerca del logo di una singola squadra
+        """
+        try:
+            # Prepara la query di ricerca specifica per la squadra
+            search_query = urllib.parse.quote(f"{team_name} logo squadra calcio")
+            
+            # Utilizziamo l'API di Bing Image Search con parametri migliorati
+            search_url = f"https://www.bing.com/images/search?q={search_query}&qft=+filterui:photo-transparent+filterui:aspect-square&form=IRFLTR"
+            
+            headers = { 
+                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36",
+                "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8",
+                "Accept-Language": "it-IT,it;q=0.9,en-US;q=0.8,en;q=0.7",
+                "Cache-Control": "max-age=0",
+                "Connection": "keep-alive"
+            } 
+            
+            response = requests.get(search_url, headers=headers, timeout=10)
+            
+            if response.status_code == 200: 
+                # Metodo 1: Cerca pattern per murl (URL dell'immagine media)
+                patterns = [
+                    r'murl&quot;:&quot;(https?://[^&]+)&quot;',
+                    r'"murl":"(https?://[^"]+)"',
+                    r'"contentUrl":"(https?://[^"]+\.(?:png|jpg|jpeg|svg))"',
+                    r'<img[^>]+src="(https?://[^"]+\.(?:png|jpg|jpeg|svg))[^>]+class="mimg"',
+                    r'<a[^>]+class="iusc"[^>]+m=\'{"[^"]*":"[^"]*","[^"]*":"(https?://[^"]+)"'
+                ]
+                
+                for pattern in patterns:
+                    matches = re.findall(pattern, response.text)
+                    if matches and len(matches) > 0:
+                        # Prendi il primo risultato che sembra un logo (preferibilmente PNG o SVG)
+                        for match in matches:
+                            if '.png' in match.lower() or '.svg' in match.lower():
+                                return match
+                        # Se non troviamo PNG o SVG, prendi il primo risultato
+                        return matches[0]
+                
+                # Metodo alternativo: cerca JSON incorporato nella pagina
+                json_match = re.search(r'var\s+IG\s*=\s*(\{.+?\});\s*', response.text)
+                if json_match:
+                    try:
+                        # Estrai e analizza il JSON
+                        json_str = json_match.group(1)
+                        # Pulisci il JSON se necessario
+                        json_str = re.sub(r'([{,])\s*([a-zA-Z0-9_]+):', r'\1"\2":', json_str)
+                        data = json.loads(json_str)
+                        
+                        # Cerca URL di immagini nel JSON
+                        if 'images' in data and len(data['images']) > 0:
+                            for img in data['images']:
+                                if 'murl' in img:
+                                    return img['murl']
+                    except Exception as e:
+                        print(f"[!] Errore nell'analisi JSON: {e}")
+                
+                print(f"[!] Nessun logo trovato per '{team_name}' con i pattern standard")
+                
+                # Ultimo tentativo: cerca qualsiasi URL di immagine nella pagina
+                any_img = re.search(r'(https?://[^"\']+\.(?:png|jpg|jpeg|svg|webp))', response.text)
+                if any_img:
+                    return any_img.group(1)
+                    
+        except Exception as e: 
+            print(f"[!] Errore nella ricerca del logo per '{team_name}': {e}") 
         
         # Se non troviamo nulla, restituiamo None 
         return None

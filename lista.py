@@ -219,9 +219,11 @@ def eventi_m3u8_generator():
             from selenium.webdriver.support import expected_conditions as EC
             import time
             
-            # Rimuovi eventuali riferimenti all'orario dal nome dell'evento
             clean_event_name = re.sub(r'\s*\(\d{1,2}:\d{2}\)\s*$', '', event_name)
-            
+            # Se c'è un ':', prendi solo la parte dopo
+            if ':' in clean_event_name:
+                clean_event_name = clean_event_name.split(':', 1)[1].strip()
+                
             # Estrai i nomi delle squadre (se presenti)
             teams_match = re.search(r'(.+?)\s+(?:vs\.?|contro|[-–—])\s+(.+)', clean_event_name, re.IGNORECASE)
             

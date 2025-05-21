@@ -223,7 +223,7 @@ def eventi_m3u8_generator():
             if teams_match:
                 team1, team2 = teams_match.groups()
                 search_queries = [
-                    f"{team1} vs {team2} logo epg"
+                    f"{clean_event_name} logo epg"
                 ]
             else:
                 search_queries = [

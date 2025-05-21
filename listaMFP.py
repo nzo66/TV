@@ -217,20 +217,20 @@ def eventi_m3u8_generator():
             # Se c'è un ':', prendi solo la parte dopo
             if ':' in clean_event_name:
                 clean_event_name = clean_event_name.split(':', 1)[1].strip()
-                        
+            
             # Estrai i nomi delle squadre (se presenti)
             teams_match = re.search(r'(.+?)\s+(?:vs\.?|contro|[-–—])\s+(.+)', clean_event_name, re.IGNORECASE)
             
-            # Prepara query di ricerca diverse a seconda del tipo di evento
+            search_queries = []
             if teams_match:
                 team1, team2 = teams_match.groups()
                 search_queries = [
-                    f"{clean_event_name} logo epg"
+                    f"{team1} vs {team2} logo epg",
+                    f"{clean_event_name} logo epg" # Fallback con il nome completo dell'evento
                 ]
             else:
                 search_queries = [
-                    f"{clean_event_name} logo epg"
-                ]
+                    f"{clean_event_name}  logo epg"                ]
             
             # Configura le opzioni di Chrome
             chrome_options = Options()
@@ -239,7 +239,8 @@ def eventi_m3u8_generator():
             chrome_options.add_argument("--no-sandbox")
             chrome_options.add_argument("--disable-dev-shm-usage")
             chrome_options.add_argument("--window-size=1920,1080")
-            chrome_options.add_argument(f"user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36")
+            # Aggiornato User-Agent a una versione più comune e stabile
+            chrome_options.add_argument("user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36")
             
             # Inizializza il driver di Chrome
             driver = webdriver.Chrome(options=chrome_options)

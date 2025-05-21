@@ -25,7 +25,18 @@ jobs:
       
       - name: Run Script
         run: |
-          export $(grep -v '^#' .env | xargs)
+          if [ -f .env ]; then
+            export $(grep -v '^#' .env | xargs)
+          else
+            echo ".env file not found. Assicurati che esista nel repository."
+            exit 1
+          fi
+          
+          if [ -z "${LISTA}" ]; then
+            echo "La variabile LISTA non è impostata. Controlla il tuo file .env."
+            exit 1
+          fi
+          
           python "${LISTA}.py"
       
       - name: Configura Git

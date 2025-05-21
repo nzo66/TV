@@ -610,51 +610,55 @@ def epg_eventi_generator():
     def generate_epg_xml(json_data):
         epg_content = '<?xml version="1.0" encoding="UTF-8"?>\n<tv>\n'
         
-        # Definisci l'offset per l'ora italiana (es. UTC+2)
         italian_offset = timedelta(hours=2)
-        italian_offset_str = "+0200" # Stringa per l'offset XML
+        italian_offset_str = "+0200" 
 
-        # Ottieni l'ora corrente in UTC e convertila in ora italiana per i confronti
         current_datetime_utc = datetime.utcnow()
         current_datetime_local = current_datetime_utc + italian_offset
 
-        channel_ids_processed = set() # Tiene traccia degli ID dei canali già aggiunti
+        # Tiene traccia degli ID dei canali per cui è già stato scritto il tag <channel>
+        channel_ids_processed_for_channel_tag = set() 
 
         for date_key, categories in json_data.items():
+            # Dizionario per memorizzare l'ora di fine dell'ultimo evento per ciascun canale IN QUESTA DATA SPECIFICA
+            # Viene resettato per ogni nuova data.
+            last_event_end_time_per_channel_on_date = {}
+
             try:
-                # Estrai la parte della data dalla chiave (es. "Monday 01 July 2024")
                 date_str_from_key = date_key.split(' - ')[0]
-                # Rimuovi eventuali suffissi ordinali (st, nd, rd, th)
                 date_str_cleaned = re.sub(r'(\d+)(st|nd|rd|th)', r'\1', date_str_from_key)
-                # Parsa la data
                 event_date_part = datetime.strptime(date_str_cleaned, "%A %d %B %Y").date()
             except ValueError as e:
                 print(f"[!] Errore nel parsing della data EPG: '{date_str_from_key}'. Errore: {e}")
                 continue
 
-            # Confronta solo la parte data (in ora locale) per escludere date passate
             if event_date_part < current_datetime_local.date():
                 continue
 
             for category_name, events_list in categories.items():
-                for event_info in events_list:
-                    # Usa .get() per accedere in sicurezza ai campi, fornendo valori di default
-                    time_str_utc = event_info.get("time", "00:00")  # Orario di inizio UTC (HH:MM) dal JSON
+                # Ordina gli eventi per orario di inizio (UTC) per garantire la corretta logica "evento precedente"
+                try:
+                    sorted_events_list = sorted(
+                        events_list,
+                        key=lambda x: datetime.strptime(x.get("time", "00:00"), "%H:%M").time()
+                    )
+                except Exception as e_sort:
+                    print(f"[!] Attenzione: Impossibile ordinare gli eventi per la categoria '{category_name}' nella data '{date_key}'. Si procede senza ordinamento. Errore: {e_sort}")
+                    sorted_events_list = events_list
+
+                for event_info in sorted_events_list:
+                    time_str_utc = event_info.get("time", "00:00")
                     event_name = clean_text(event_info.get("event", "Evento Sconosciuto"))
                     event_desc = event_info.get("description", f"{event_name} trasmesso in diretta.")
 
                     try:
-                        # Combina la data (dal JSON) con l'ora (dal JSON, che è UTC)
                         event_time_utc_obj = datetime.strptime(time_str_utc, "%H:%M").time()
                         event_datetime_utc = datetime.combine(event_date_part, event_time_utc_obj)
-                        
-                        # Converti l'orario dell'evento da UTC a ora italiana
                         event_datetime_local = event_datetime_utc + italian_offset
                     except ValueError as e:
-                        print(f"[!] Errore nel parsing dell'orario UTC '{time_str_utc}' per l'evento EPG '{event_name}'. Errore: {e}")
-                        continue # Salta questo evento se l'orario non è valido
+                        print(f"[!] Errore parsing orario UTC '{time_str_utc}' per EPG evento '{event_name}'. Errore: {e}")
+                        continue
                     
-                    # Filtra eventi già terminati da più di 2 ore (confronto in ora italiana)
                     if event_datetime_local < (current_datetime_local - timedelta(hours=2)):
                         continue
 
@@ -662,41 +666,65 @@ def epg_eventi_generator():
                         channel_id = channel_data.get("channel_id", "")
                         channel_name_cleaned = clean_text(channel_data.get("channel_name", "Canale Sconosciuto"))
 
-                        if not channel_id: # Salta se l'ID del canale è mancante o vuoto
+                        if not channel_id: 
                             continue
 
-                        # Aggiungi il tag <channel> solo se non è già stato processato
-                        if channel_id not in channel_ids_processed:
+                        if channel_id not in channel_ids_processed_for_channel_tag:
                             epg_content += f'  <channel id="{channel_id}">\n'
                             epg_content += f'    <display-name>{channel_name_cleaned}</display-name>\n'
                             epg_content += f'  </channel>\n'
-                            channel_ids_processed.add(channel_id)
+                            channel_ids_processed_for_channel_tag.add(channel_id)
                         
-                        # Annuncio:
-                        # Inizio: 00:00 del giorno dell'evento (ora italiana)
-                        # Fine: inizio dell'evento (ora italiana)
-                        announcement_start_local = datetime.combine(event_datetime_local.date(), datetime.min.time()) # 00:00 ora italiana
-                        announcement_stop_local = event_datetime_local # Inizio evento ora italiana
-                        announcement_title = f'Inizierà alle {event_datetime_local.strftime("%H:%M")}.' # Orario italiano
-                        
-                        epg_content += f'  <programme start="{announcement_start_local.strftime("%Y%m%d%H%M%S")} {italian_offset_str}" stop="{announcement_stop_local.strftime("%Y%m%d%H%M%S")} {italian_offset_str}" channel="{channel_id}">\n'
-                        epg_content += f'    <title lang="it">{announcement_title}</title>\n'
-                        epg_content += f'    <desc lang="it">{event_name}.</desc>\n' # Descrizione evento per annuncio
-                        epg_content += f'    <category lang="it">Annuncio</category>\n'
-                        epg_content += f'  </programme>\n'
-                        
-                        # Evento principale: durata presunta di 2 ore, tutto in ora italiana
+                        # --- LOGICA ANNUNCIO MODIFICATA ---
+                        announcement_stop_local = event_datetime_local # L'annuncio termina quando inizia l'evento corrente
+
+                        # Determina l'inizio dell'annuncio
+                        if channel_id in last_event_end_time_per_channel_on_date:
+                            # C'è stato un evento precedente su questo canale in questa data
+                            previous_event_end_time_local = last_event_end_time_per_channel_on_date[channel_id]
+                            
+                            # Assicurati che l'evento precedente termini prima che inizi quello corrente
+                            if previous_event_end_time_local < event_datetime_local:
+                                announcement_start_local = previous_event_end_time_local
+                            else:
+                                # Sovrapposizione o stesso orario di inizio, problematico.
+                                # Fallback a 00:00 del giorno, o potresti saltare l'annuncio.
+                                print(f"[!] Attenzione: L'evento '{event_name}' sul canale '{channel_id}' inizia prima o contemporaneamente alla fine dell'evento precedente su questo canale. Fallback per l'inizio dell'annuncio.")
+                                announcement_start_local = datetime.combine(event_datetime_local.date(), datetime.min.time())
+                        else:
+                            # Primo evento per questo canale in questa data
+                            announcement_start_local = datetime.combine(event_datetime_local.date(), datetime.min.time()) # 00:00 ora italiana
+
+                        # Assicura che l'inizio dell'annuncio sia prima della fine
+                        if announcement_start_local < announcement_stop_local:
+                            announcement_title = f'Inizierà alle {event_datetime_local.strftime("%H:%M")}.' # Orario italiano
+                            
+                            epg_content += f'  <programme start="{announcement_start_local.strftime("%Y%m%d%H%M%S")} {italian_offset_str}" stop="{announcement_stop_local.strftime("%Y%m%d%H%M%S")} {italian_offset_str}" channel="{channel_id}">\n'
+                            epg_content += f'    <title lang="it">{announcement_title}</title>\n'
+                            epg_content += f'    <desc lang="it">{event_name}.</desc>\n' 
+                            epg_content += f'    <category lang="it">Annuncio</category>\n'
+                            epg_content += f'  </programme>\n'
+                        elif announcement_start_local == announcement_stop_local:
+                            print(f"[INFO] Annuncio di durata zero saltato per l'evento '{event_name}' sul canale '{channel_id}'.")
+                        else: # announcement_start_local > announcement_stop_local
+                            print(f"[!] Attenzione: L'orario di inizio calcolato per l'annuncio è successivo all'orario di fine per l'evento '{event_name}' sul canale '{channel_id}'. Annuncio saltato.")
+
+                        # --- EVENTO PRINCIPALE ---
                         main_event_start_local = event_datetime_local
-                        main_event_stop_local = event_datetime_local + timedelta(hours=2) # Fine evento ora italiana
+                        main_event_stop_local = event_datetime_local + timedelta(hours=2) # Durata fissa 2 ore
                         
                         epg_content += f'  <programme start="{main_event_start_local.strftime("%Y%m%d%H%M%S")} {italian_offset_str}" stop="{main_event_stop_local.strftime("%Y%m%d%H%M%S")} {italian_offset_str}" channel="{channel_id}">\n'
                         epg_content += f'    <title lang="it">{event_name}</title>\n'
                         epg_content += f'    <desc lang="it">{event_desc}</desc>\n'
                         epg_content += f'    <category lang="it">{clean_text(category_name)}</category>\n'
                         epg_content += f'  </programme>\n'
+
+                        # Aggiorna l'orario di fine dell'ultimo evento per questo canale in questa data
+                        last_event_end_time_per_channel_on_date[channel_id] = main_event_stop_local
+        
         epg_content += "</tv>\n"
         return epg_content
-
+        
     def epg_eventi_xml_generator():
         print("Eseguendo la generazione di eventi.xml...")
         JSON_INPUT_FILE_EPG = "daddyliveSchedule.json" # File JSON di input
